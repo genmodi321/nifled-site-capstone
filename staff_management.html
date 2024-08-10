@@ -173,7 +173,7 @@
                                         <p class="fs-small mt-10"> <a
                                                 href="index.html"
                                                 class="nav-ham-link">Home</a> /
-                                            Semester Management</p>
+                                            Staff Management</p>
                                     </h3>
 
                                     <div class="ms-auto" aria-hidden="true">
@@ -185,18 +185,13 @@
                             </div>
 
                             <div class="d-flex align-items-center">
-                                <h5>Class List</h5>
+                                <h5>Admin Account List</h5>
                                 <div class="ms-auto" aria-hidden="true">
                                     <button type="button" class="btn btn-csms"
                                         data-bs-toggle="modal"
-                                        data-bs-target="#createSemesterModal"><i
+                                        data-bs-target="#addAdminModal"><i
                                             class="bi bi-pencil-square"></i>
-                                        Create a Semester</button>
-                                    <button type="button" class="btn btn-csms"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#assignClassModal"><i
-                                            class="bi bi-pencil-fill"></i>
-                                        Assign a Class to a Semester</button>
+                                        Add an Admin</button>
 
                                 </div>
 
@@ -208,10 +203,11 @@
                         <table id="classes">
                             <thead>
                                 <tr>
-                                    <th>Semester Name</th>
-                                    <th>Start Date</th>
-                                    <th>End Date</th>
-                                    <th>Description</th>
+                                    <th>Full Name</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Password</th>
+                                    <th>Gender</th>
                                     <th>Actions</th>
 
                                 </tr>
@@ -219,9 +215,19 @@
 
                             <tbody>
                                 <tr>
-                                    <td>First Semester</td>
-                                    <td>08/08/2024</td>
-                                    <td>08/08/2024</td>
+                                    <td>Jason Catadman</td>
+                                    <td>wmsu_catadman</td>
+                                    <td>jason_catadman@wmsu.css.edu.ph</td>
+                                    <td>
+
+                                        <span id="password1"
+                                            data-password="password123"
+                                            data-hidden="true">
+                                            testpassword123 </span> &nbsp;
+                                        <button class="btn"
+                                            onclick="togglePassword('password1', this)">Show</button>
+                                    </td>
+
                                     <td>First semester description</td>
 
                                     <td>
@@ -349,13 +355,13 @@
         </div>
     </div>
 
-    <div class="modal fade" id="createSemesterModal" tabindex="-1"
+    <div class="modal fade" id="addAdminModal" tabindex="-1"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5"
-                        id="exampleModalLabel">Create a Class</h1>
+                        id="exampleModalLabel">Add a new Admin</h1>
                     <button type="button" class="btn-close"
                         data-bs-dismiss="modal"
                         aria-label="Close"></button>
@@ -363,127 +369,49 @@
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <label for="classDesc" class="form-label">Semester
-                                Name</label>
+                            <label for="username"
+                                class="form-label">Username</label>
                             <input type="text" class="form-control"
-                                id="classDesc" name="classDesc">
+                                id="username" name="username">
                         </div>
                         <div class="mb-3">
-                            <label for="semStartDate" class="form-label">Start
-                                Date: </label>
-                            <input type="date" class="form-control"
-                                id="semStartDate" name="semStartDate">
+                            <label for="email" class="form-label">Email
+                            </label>
+                            <input type="email" class="form-control"
+                                id="email" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+
+                            <input type="password" class="form-control"
+                                id="password" name="password" style="width: 100%; display: inline !important;"></input>
+                                <span style="
+                                position: absolute;
+                                display: inline; 
+                                right: 5%; 
+                                margin-top: 5px !important;
+                                vertical-align: middle"><i class="bi bi-eye-slash-fill" id="togglerPassword"></i></span>
+
                         </div>
 
                         <div class="mb-3">
-                            <label for="semEndDate" class="form-label">End
-                                Date: </label>
-                            <input type="date" class="form-control"
-                                id="semEndDate" name="semEndDate">
-                        </div>
+                            <label for="confirm_password" class="form-label">Confirm Password</label>
 
-                        <div class="mb-3">
-                            <label for="classDesc" class="form-label">Semester
-                                Description</label>
-                            <textarea type="text" class="form-control"
-                                id="semDesc" name="semDesc"></textarea>
+                            <input type="password" class="form-control"
+                                id="confirm_password" name="confirm_password" style="width: 100%; display: inline !important;"></input>
+                                <span style="
+                                position: absolute;
+                                display: inline; 
+                                right: 5%; 
+                                margin-top: 5px !important;
+                                vertical-align: middle"><i class="bi bi-eye-slash-fill" id="togglerConfirmPassword"></i></span>
+                                
                         </div>
 
                     </div>
                     <div class="modal-footer">
                         <input type="submit" class="btn btn-csms"
-                            value="Save Changes">
-                        <button type="button" class="btn btn-csms"
-                            data-bs-dismiss="modal">Close</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="assignClassModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5"
-                        id="exampleModalLabel">Assigning a Class to a
-                        Semester</h1>
-                    <button type="button" class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="semester" class="form-label">Select a Semester: </label>
-                            <select class="form-select" name="semester" id="semester">
-                                <option selected>Select a Semester</option>
-                                <option value="First Semester">First Semester</option>
-                                <option value="Second Semester">Second Semester</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="availableClasses" class="form-label">Available Classes</label>
-                            <select class="form-select" name="availableClasses" id="availableClasses">
-                                <option selected>Select a Class</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3" id="assignedClassesContainer">
-                            <label>Assigned Classes</label>
-                            <table id="assignedClasses" class="display">
-                                <thead>
-                                    <tr>
-                                        <th>Class Name</th>
-                                        <th>Subjects</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="assignedClassesBody">
-                                    <!-- Prepopulated classes and subjects go here -->
-                                    <!-- Example for First Semester -->
-                                    <tr data-semester="First Semester" data-class="BSIT-1A">
-                                        <td>BSIT-1A</td>
-                                        <td>Math 101, Programming 101, English 101</td>
-                                        <td><button class="remove-btn btn btn-danger">Remove</button></td>
-                                    </tr>
-                                    <tr data-semester="First Semester" data-class="BSIT-1B">
-                                        <td>BSIT-1B</td>
-                                        <td>Math 101, Programming 101, English 102</td>
-                                        <td><button class="remove-btn btn btn-danger">Remove</button></td>
-                                    </tr>
-                                    <tr data-semester="First Semester" data-class="BSIT-2A">
-                                        <td>BSIT-2A</td>
-                                        <td>Math 201, Data Structures, Operating Systems</td>
-                                        <td><button class="remove-btn btn btn-danger">Remove</button></td>
-                                    </tr>
-                                    <!-- Example for Second Semester -->
-                                    <tr data-semester="Second Semester" data-class="BSIT-3A">
-                                        <td>BSIT-3A</td>
-                                        <td>Algorithms, Database Systems, Software Engineering</td>
-                                        <td><button class="remove-btn btn btn-danger">Remove</button></td>
-                                    </tr>
-                                    <tr data-semester="Second Semester" data-class="BSIT-3B">
-                                        <td>BSIT-3B</td>
-                                        <td>Algorithms, Database Systems, Web Development</td>
-                                        <td><button class="remove-btn btn btn-danger">Remove</button></td>
-                                    </tr>
-                                    <tr data-semester="Second Semester" data-class="BSIT-4A">
-                                        <td>BSIT-4A</td>
-                                        <td>Advanced Programming, Project Management, Ethics in IT</td>
-                                        <td><button class="remove-btn btn btn-danger">Remove</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        
-
-                    </div>
-                    <div class="modal-footer">
-                        <input type="submit" class="btn btn-csms"
-                            value="Save Changes">
+                            value="Update">
                         <button type="button" class="btn btn-csms"
                             data-bs-dismiss="modal">Close</button>
                     </form>
@@ -634,7 +562,56 @@ $(document).ready(function() {
             // Also check the selections when the class dropdown changes
             availableClassesSelect.addEventListener('change', checkSelections);
         });
-         
+        function hidePasswordsOnLoad() {
+    var passwordCells = document.querySelectorAll('span[data-password]');
+    passwordCells.forEach(function(passwordCell) {
+        var password = passwordCell.getAttribute('data-password');
+        passwordCell.textContent = '*'.repeat(password.length);
+        passwordCell.setAttribute('data-hidden', 'true');
+    });
+}
+
+function togglePassword(passwordId, button) {
+    var passwordCell = document.getElementById(passwordId);
+    var isHidden = passwordCell.getAttribute('data-hidden') === 'true';
+
+    if (isHidden) {
+        // Show the password
+        passwordCell.textContent = passwordCell.getAttribute('data-password');
+        button.textContent = "Hide";
+        passwordCell.setAttribute('data-hidden', 'false');
+    } else {
+        // Hide the password
+        passwordCell.textContent = '*'.repeat(passwordCell.getAttribute('data-password').length);
+        button.textContent = "Show";
+        passwordCell.setAttribute('data-hidden', 'true');
+    }
+}
+
+// Hide passwords when the page loads
+window.onload = hidePasswordsOnLoad;
+
+const togglerPassword = document
+            .querySelector('#togglerPassword');
+        const password = document.querySelector('#password');
+        togglerPassword.addEventListener('click', () => {
+            const type = password
+                .getAttribute('type') === 'password' ?
+                'text' : 'password';
+            password.setAttribute('type', type);
+            togglerPassword.classList.toggle('bi-eye');
+        });
+
+        const togglerConfirmPassword = document
+            .querySelector('#togglerConfirmPassword');
+        const confirmPassword = document.querySelector('#confirm_password');
+        togglerConfirmPassword.addEventListener('click', () => {
+            const type = password
+                .getAttribute('type') === 'password' ?
+                'text' : 'password';
+                confirmPassword.setAttribute('type', type);
+            togglerConfirmPassword.classList.toggle('bi-eye');
+        });
 
     </script>
 </html>
