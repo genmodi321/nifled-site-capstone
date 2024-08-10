@@ -206,10 +206,9 @@
                             <thead>
                                 <tr>
                                     <th>Full Name</th>
-                                    <th>Username</th>
                                     <th>Email</th>
-                                    <th>Password</th>
-                                    <th>Gender</th>
+                                    <th>Department</th>
+                                    <th>Class</th>
                                     <th>Actions</th>
 
                                 </tr>
@@ -218,19 +217,11 @@
                             <tbody>
                                 <tr>
                                     <td>Jason Catadman</td>
-                                    <td>wmsu_catadman</td>
                                     <td>jason_catadman@wmsu.css.edu.ph</td>
-                                    <td>
+                                    <td>Department of Information Technology</td>
+                                  <td>BSIT-4A</td>
 
-                                        <span id="password1"
-                                            data-password="password123"
-                                            data-hidden="true">
-                                            testpassword123 </span> &nbsp;
-                                        <button class="btn"
-                                            onclick="togglePassword('password1', this)">Show</button>
-                                    </td>
 
-                                    <td>First semester description</td>
 
                                     <td>
                                         <button type="button"
@@ -396,7 +387,7 @@
                             <label for="department" class="form-label">Class Assignment</label>
 
                           <div class="row">
-                            
+
                             <div class="col">
                                 <input type="checkbox" name="classes[]"> BSIT-1A
                             </div>
@@ -415,10 +406,6 @@
                           </div>
 
                         </div>
-
-                
-
-
                     </div>
                     <div class="modal-footer">
                         <input type="submit" class="btn btn-csms"
@@ -437,19 +424,66 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5"
-                        id="exampleModalLabel">Modal title</h1>
+                        id="exampleModalLabel">Editing Existing Information for: Jason Catadman</h1>
                     <button type="button" class="btn-close"
                         data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save
-                        changes</button>
+                    <form>
+                        <div class="mb-3">
+                            <label for="fullName"
+                                class="form-label">Full Name</label>
+                            <input type="text" class="form-control"
+                                id="fullName" name="fullName" value="Jason Catadman">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email
+                            </label>
+                            <input type="email" class="form-control"
+                                id="email" name="email" value="jason_catadman@wmsu.css.edu.ph">
+                        </div>
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Department</label>
+
+                            <select class="form-control" name="department">
+                                <option>Select a department</option>   
+                                <option value="Department of Information Technology" selected>Department of Information Technology</option>
+                                <option value="Department of Computer Science">Department of Computer Science</option>
+                            </select>
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Class Assignment</label>
+
+                          <div class="row">
+
+                            <div class="col">
+                                <input type="checkbox" name="classes[]"> BSIT-1A
+                            </div>
+
+                            <div class="col">
+                                <input type="checkbox" name="classes[]"> BSIT-2A
+                            </div>
+
+                            <div class="col">
+                                <input type="checkbox" name="classes[]"> BSIT-3A
+                            </div>
+
+                            <div class="col">
+                                <input type="checkbox" name="classes[]" checked> BSIT-4A
+                            </div>
+                          </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-csms"
+                            value="Update">
+                        <button type="button" class="btn btn-csms"
+                            data-bs-dismiss="modal">Close</button>
+                    </form>
                 </div>
             </div>
         </div>

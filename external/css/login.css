@@ -102,3 +102,16 @@ body {
     width: 100%;
     text-align: center;
 }
+
+.gb{
+    color: black !important;
+    text-decoration: none;
+}
+
+.gb:hover{
+    text-decoration:underline;
+}
+
+.gb-link{
+    color: #415D43
+}
