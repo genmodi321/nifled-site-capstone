@@ -29,6 +29,17 @@ nav {
     border-radius: 100%;
 }
 
+.logo-middle {
+    width: auto;
+    height: 100px;
+    background-color: white;
+    border-radius: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav-link-span {
     color: white !important;
     text-decoration: none;
@@ -45,15 +56,20 @@ body {
 }
 
 .main-container {
-    height: 100vh;
     background-image: url('../img/background.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-size: cover; 
     color: white;
+}
+
+.content{
+    margin-top: 10px;
+    margin: 0px auto;
+    width: 85%;
+    background-color: #415D43;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .paragraph-text {
@@ -92,3 +108,35 @@ body {
     font-weight: bolder;
 }
 
+.center-me{
+    justify-content: center;
+}
+
+
+
+.molder-container{
+    text-align: center;
+    height: 50vh;
+    color: white;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-container{
+    color: white;
+    width: 85%;
+    margin-bottom: 50px;
+}
+
+.molder-title{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.course{
+    text-decoration: underline;
+    margin: 20px 0px 20px 0px;
+}
