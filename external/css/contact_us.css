@@ -80,8 +80,8 @@ body {
     margin-bottom: 25px;
 }
 
-.bl-right{
-    border-right: 2px solid white;
+.border-left{
+    border-left: 2px solid white;
 }
 
 .input-option{
@@ -113,4 +113,20 @@ body {
 .faq{
     width: 50%;
     font-weight: bolder;
+}
+
+.iconic-contact{
+    background-color: white !important;
+    border-radius: 100% !important;
+    color: #415D43 !important;
+    padding: 5px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: #415D43 !important;
+}
+
+.accordion-button:focus {
+    --bs-accordion-btn-focus-box-shadow: none;
 }
