@@ -56,86 +56,61 @@ body {
 }
 
 .main-container {
-    background-size: cover; 
     color: white;
-    
+    height: max-content;
+    width: 85%;
+}
+
+.c-us{
+    margin: 20px;
 }
 
 .content{
     margin-top: 10px;
     margin: 0px auto;
-    width: 85%;
+    width: 95%;
     background-color: #415D43;
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin: 20px;
 }
 
-.paragraph-text {
-    font-size: 20px;
+.git{
+    margin-bottom: 25px;
 }
 
-.header-text {
-    font-weight: bolder;
+.bl-right{
+    border-right: 2px solid white;
 }
 
-.big-logo {
-    height: 250px;
-    width: 250px;
+.input-option{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.right{
+    display: flex;
+    justify-content: end;
+}
+
+.btn-sbmit{
+    margin-top: 10px;
     background-color: white;
-    border-radius: 100%;
-    margin: 15px;
+    color: #415D43;
+    border:none
 }
 
-.link-container {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.navigation-link{
-    color: white;
-    text-decoration: none;
-    transition: transform 0.2s ease;
-}
-
-.navigation-link:hover{
-    transform: scale(110%);
-}
-
-.bold{
-    font-weight: bolder;
-}
-
-.center-me{
-    justify-content: center;
-}
-
-
-
-.molder-container{
-    text-align: center;
-    height: 50vh;
-    color: white;
-    width: 65%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.info-container{
-    color: white;
-    width: 85%;
+.map{
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.molder-title{
-    margin-top: 60px;
-    text-align: center;
-}
-
-.course{
-    text-decoration: underline;
-    margin: 20px 0px 20px 0px;
+.faq{
+    width: 50%;
+    font-weight: bolder;
 }
