@@ -1,154 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Class Assignment with Subject Association</title>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-    <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <style>
-        #assignedClassesContainer {
-            display: none;
-        }
-    </style>
-</head>
-<body>
+<script src="https://unpkg.com/html5-qrcode"></script>
 
-    <div class="mb-3">
-        <label for="semester" class="form-label">Select a Semester: </label>
-        <select class="form-select" name="semester" id="semester">
-            <option selected disabled>Select a Semester</option>
-            <option value="First Semester">First Semester</option>
-            <option value="Second Semester">Second Semester</option>
-        </select>
-    </div>
+<div id="qr-reader" style="width:500px"></div>
+<div id="qr-reader-results"></div>
 
-    <div class="mb-3">
-        <label for="availableClasses" class="form-label">Available Classes</label>
-        <select class="form-select" name="availableClasses" id="availableClasses">
-            <option selected disabled>Select a Class</option>
-        </select>
-    </div>
+<script>
+    var resultContainer = document.getElementById('qr-reader-results');
+var lastResult, countResults = 0;
 
-    <div class="mb-3">
-        <button id="addClassBtn" class="btn btn-primary">Add Class</button>
-    </div>
+function onScanSuccess(decodedText, decodedResult) {
+    if (decodedText !== lastResult) {
+        ++countResults;
+        lastResult = decodedText;
+        // Handle on success condition with the decoded message.
+        console.log(`Scan result ${decodedText}`, decodedResult);
+    }
+}
 
-    <div class="mb-3" id="assignedClassesContainer">
-        <label>Assigned Classes</label>
-        <table id="assignedClasses" class="display">
-            <thead>
-                <tr>
-                    <th>Class Name</th>
-                    <th>Subjects</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Assigned classes and subjects will be added here -->
-            </tbody>
-        </table>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const semesterSelect = document.getElementById('semester');
-            const availableClassesSelect = document.getElementById('availableClasses');
-            const addClassBtn = document.getElementById('addClassBtn');
-            const assignedClassesContainer = document.getElementById('assignedClassesContainer');
-            const assignedClassesTable = document.getElementById('assignedClasses').getElementsByTagName('tbody')[0];
-
-            const classes = {
-                "First Semester": ["BSIT-1A", "BSIT-1B", "BSIT-2A", "BSIT-2B"],
-                "Second Semester": ["BSIT-3A", "BSIT-3B", "BSIT-4A", "BSIT-4B"]
-            };
-
-            const subjects = {
-                "First Semester": {
-                    "BSIT-1A": ["Math 101", "Programming 101", "English 101"],
-                    "BSIT-1B": ["Math 101", "Programming 101", "English 102"],
-                    "BSIT-2A": ["Math 201", "Data Structures", "Operating Systems"],
-                    "BSIT-2B": ["Math 201", "Data Structures", "Networking Basics"]
-                },
-                "Second Semester": {
-                    "BSIT-3A": ["Algorithms", "Database Systems", "Software Engineering"],
-                    "BSIT-3B": ["Algorithms", "Database Systems", "Web Development"],
-                    "BSIT-4A": ["Advanced Programming", "Project Management", "Ethics in IT"],
-                    "BSIT-4B": ["Advanced Programming", "AI Fundamentals", "Mobile Development"]
-                }
-            };
-
-            // Update available classes based on selected semester
-            semesterSelect.addEventListener('change', function () {
-                const selectedSemester = semesterSelect.value;
-
-                // Clear previous options
-                availableClassesSelect.innerHTML = '<option selected disabled>Select a Class</option>';
-
-                // Add new options based on selected semester
-                if (classes[selectedSemester]) {
-                    classes[selectedSemester].forEach(function (className) {
-                        const option = document.createElement('option');
-                        option.value = className;
-                        option.textContent = className;
-                        availableClassesSelect.appendChild(option);
-                    });
-                }
-
-                checkSelections();
-            });
-
-            // Show/hide assigned classes section based on selections
-            function checkSelections() {
-                if (semesterSelect.value !== 'Select a Semester' && availableClassesSelect.value !== 'Select a Class') {
-                    assignedClassesContainer.style.display = 'block';
-                } else {
-                    assignedClassesContainer.style.display = 'none';
-                }
-            }
-
-            // Add selected class and associated subjects to the Assigned Classes table
-            addClassBtn.addEventListener('click', function () {
-                const selectedSemester = semesterSelect.value;
-                const selectedClass = availableClassesSelect.value;
-
-                if (selectedClass && selectedClass !== 'Select a Class') {
-                    // Create a new row
-                    const newRow = assignedClassesTable.insertRow();
-
-                    // Create cells for the class name, subjects, and actions
-                    const classNameCell = newRow.insertCell(0);
-                    const subjectsCell = newRow.insertCell(1);
-                    const actionsCell = newRow.insertCell(2);
-
-                    // Populate the class name cell
-                    classNameCell.textContent = selectedClass;
-
-                    // Populate the subjects cell with associated subjects
-                    const assignedSubjects = subjects[selectedSemester][selectedClass];
-                    subjectsCell.textContent = assignedSubjects.join(", ");
-
-                    // Populate the actions cell with a remove button
-                    actionsCell.innerHTML = '<button class="remove-btn btn btn-danger">Remove</button>';
-
-                    // Attach event listener to the remove button
-                    actionsCell.querySelector('.remove-btn').addEventListener('click', function () {
-                        assignedClassesTable.deleteRow(newRow.rowIndex - 1);
-                        checkSelections();
-                    });
-
-                    // Show the assigned classes container if not already visible
-                    checkSelections();
-                }
-            });
-
-            // Also check the selections when the class dropdown changes
-            availableClassesSelect.addEventListener('change', checkSelections);
-        });
-    </script>
-</body>
-</html>
+var html5QrcodeScanner = new Html5QrcodeScanner(
+    "qr-reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess);
+</script>

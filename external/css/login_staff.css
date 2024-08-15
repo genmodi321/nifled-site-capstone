@@ -45,7 +45,7 @@ body {
 }
 
 .login-container {
-    height: 100vh;
+    height: fit-content;
     background-color: white;
 }
 
@@ -54,7 +54,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    height: 100vh;
+    height: fit-content;
+    padding: 20px;
 }
 
 .paragraph-text {
@@ -116,7 +117,6 @@ body {
 .login-btn:hover{
     background-color: #5b8b5e;
 }
-
 
 .gb{
     color: black !important;
