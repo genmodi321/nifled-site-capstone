@@ -146,7 +146,7 @@
                 <div class="d-flex align-items-center">
                   <button class="btn btn-csms"><i class="bi bi-file-earmark-arrow-up-fill"></i> Create Class</button>
                   <div class="ms-auto" aria-hidden="true">
-                    <button class="btn btn-csms"><i class="bi bi-file-binary-fill"></i> Attendance</button>
+                    <button class="btn btn-csms" onclick="gotoAttendance()"><i class="bi bi-file-binary-fill"></i> Attendance</button>
                     <button class="btn btn-csms"><i class="bi bi-pen-fill"></i>
                       Rubrics</button>
                     <button class="btn btn-csms"> <i class="bi bi-code"></i>
@@ -263,31 +263,14 @@
                     <td class="text-center">50</td>
                     <td class="text-center">100</td>
                     <td class="text-center">150</td>
-                    <td class="text-center">1.5</td>
+                    <td class="text-center">
+                      <button id="toggleButton" class="grade">
+                        <i id="eyeIcon" class="bi bi-eye-slash-fill"></i>
+                        <span id="toggleText" style="display:none;">1.5</span>
+                    </button>
+                  </td> 
                   </tr>
-                  <tr>
-                    <td style="width:1% !important;">2.)</td>
-                    <td>Abrajano, Joh Paulo </td>
-                    <td class="text-center">15/30</td>
-                    <td class="text-center">15/30</td>
-                    <td class="text-center">15/30</td>
-                    <td class="text-center">15/30</td>
-                    <td class="text-center">60/120</td>
-                    <td class="text-center">20/50</td>
-                    <td class="text-center">45/50</td>
-                    <td class="text-center">50/50</td>
-                    <td class="text-center">50/50</td>
-                    <td class="text-center">165/200</td>
-                    <td class="text-center">25/25</td>
-                    <td class="text-center">25/25</td>
-                    <td class="text-center">25/25</td>
-                    <td class="text-center">25/25</td>
-                    <td class="text-center">100</td>
-                    <td class="text-center">50</td>
-                    <td class="text-center">100</td>
-                    <td class="text-center">150</td>
-                    <td class="text-center">1.5</td>
-                  </tr>
+           
 
                   <tr>
                     <td class="text-center grey-bg" colspan="2">Female</td>
@@ -314,7 +297,12 @@
                     <td class="text-center">50</td>
                     <td class="text-center">100</td>
                     <td class="text-center">150</td>
-                    <td class="text-center">1.5</td>
+                    <td class="text-center">
+                      <button id="toggleButton2" class="grade">
+                        <i id="eyeIcon2" class="bi bi-eye-slash-fill"></i>
+                        <span id="toggleText2" style="display:none;">1.5</span>
+                    </button>
+                  </td> 
                   </tr>
 
                 </table>
@@ -843,8 +831,38 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
     }
 
     function redirect(){
-      window.location.href = "http://localhost/teacher_class_management_editable.html";
+      window.location.href = "teacher_class_management_editable.html";
     }
+
+    function gotoAttendance(){
+      window.location.href = "teacher_class_attendance.html";
+    }
+
+    document.getElementById("toggleButton").addEventListener("click", function() {
+        var eyeIcon = document.getElementById("eyeIcon");
+        var toggleText = document.getElementById("toggleText");
+
+        if (eyeIcon.style.display === "none") {
+            eyeIcon.style.display = "inline";
+            toggleText.style.display = "none";
+        } else {
+            eyeIcon.style.display = "none";
+            toggleText.style.display = "inline";
+        }
+    });
+
+    document.getElementById("toggleButton2").addEventListener("click", function() {
+        var eyeIcon2 = document.getElementById("eyeIcon2");
+        var toggleText2 = document.getElementById("toggleText2");
+
+        if (eyeIcon2.style.display === "none") {
+            eyeIcon2.style.display = "inline";
+            toggleText2.style.display = "none";
+        } else {
+            eyeIcon2.style.display = "none";
+            toggleText2.style.display = "inline";
+        }
+    });
 </script>
 
     </html>
