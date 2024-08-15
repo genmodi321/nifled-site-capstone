@@ -141,405 +141,494 @@
                   </div>
                 </div>
               </div>
-
+              <br>
               <div class="d-flex align-items-center">
-                <strong role="status">Loading...</strong>
-                <div class="spinner-border ms-auto" aria-hidden="true"></div>
+                <h5 class="bold">Scan QR Code</h5>
+                <div class="ms-auto text-center" aria-hidden="true">
+                  <div class data-bs-toggle="modal"
+                    data-bs-target="#cameraModal">
+                    <h5><i class="bi bi-camera-fill"></i></h5>
+                    <p>Scan QR</p>
+                  </div>
+                </div>
               </div>
 
-              </div>
+              <div class="container-fluid attendance-container text-center">
+                <div class="row">
+                  <div class="col">
+                    <p class="bold">Capstone I</p>
+                  </div>
+                  <div class="col">
+                    <p class="bold">ATTENDANCE</p>
+                  </div>
+                  <div class="col">
+                    <p class="bold">August 15, 2024 <br> 11:00 PM</p>
+                  </div>
+                </div>
 
+                <br>
+
+                <div class="row">
+                  <div class="col">
+                    <p class="bold">1.) Abrajano, John Paulo</p>
+                  </div>
+                  <div class="col">
+                    <hr class="liner">
+                  </div>
+                  <div class="col">
+                    <p class="bold"><i class="bi bi-check-square-fill"> </i></p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <p class="bold">2.) Aquino, Leonard</p>
+                  </div>
+                  <div class="col">
+                    <hr class="liner">
+                  </div>
+                  <div class="col">
+                    <p class="bold"><i class="bi bi-square"> </i></p>
+                  </div>
+                </div>
+
+                <div class="row text-center">
+                  <button>Print</button>
+                </div>
+
+              </div>
             </div>
 
           </div>
+
         </div>
+      </div>
 
-      </body>
+    </body>
 
-      <div class="modal fade" id="notificationModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5"
-                id="exampleModalLabel">Notifications</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
+    <div class="modal fade" id="notificationModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5"
+              id="exampleModalLabel">Notifications</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="d-flex align-items-center">
+              <span>Notifications</span>
+              <div class=" ms-auto" aria-hidden="true"><a href
+                  class="nav-ham-link"> View All</a> | <a href
+                  class="nav-ham-link"> Read All</a></div>
             </div>
-            <div class="modal-body">
 
+            <br>
+
+            <div class="row ">
+              <div class="col-sm-2 text-center">
+                <h1><i class="bi bi-bell-fill"></i></h1>
+              </div>
+              <div class="col">
+                <h5>You have received a new notification!</h5>
+                <p>Test notification!</p>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="row ">
+              <div class="col-sm-2 text-center">
+                <h1><i class="bi bi-bell-fill"></i></h1>
+              </div>
+              <div class="col">
+                <h5>You have received a new notification!</h5>
+                <p>Test notification!</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="messageModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Chats</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="row msg align-items-center"
+              data-bs-target="#actualMessageModal" data-bs-toggle="modal">
+              <div class="col-sm-3 text-center"
+                style="border-right: 1px solid black;">
+                <h1><i class="bi bi-person-fill"></i></h1>
+                <span>Jason Catadman</span>
+              </div>
+              <div class="col">
+                <p><em>You: Sure sir Catadman. I will work on that right
+                    now.</em></p>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="row unread msg align-items-center">
+              <div class="col-sm-3 text-center"
+                style="border-right: 1px solid black;">
+                <h1><i class="bi bi-person-fill"></i></h1>
+                <span>Ceed Lorenzo</span>
+              </div>
+              <div class="col">
+                <p><em>Lorenzo: Good afternoon sir, ask ko lang if available
+                    po
+                    si...</em></p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="actualMessageModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Chats</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="chatBody">
+            <div class="time text-center grey">
+              2:09 PM - 8/11/2024
+            </div>
+            <br>
+            <div class="row sender">
+              <div class="col">
+                <i class="bi bi-person-fill"></i>
+                <div class="message">
+                  <span>Hi, this is Jason Catadman. I'd like to switch from
+                    Web
+                    Technologies to Software Engineering, thanks!</span>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row receiver">
+              <div class="col">
+                <div class="message">
+                  <span>Sure sir Catadman. I will work on that right
+                    now.</span>
+                </div>
+                <i class="bi bi-person"></i>
+              </div>
+            </div>
+            <br>
+          </div>
+
+          <div class="modal-footer">
+            <form id="messageForm">
               <div class="d-flex align-items-center">
-                <span>Notifications</span>
-                <div class=" ms-auto" aria-hidden="true"><a href
-                    class="nav-ham-link"> View All</a> | <a href
-                    class="nav-ham-link"> Read All</a></div>
-              </div>
-
-              <br>
-
-              <div class="row ">
-                <div class="col-sm-2 text-center">
-                  <h1><i class="bi bi-bell-fill"></i></h1>
-                </div>
-                <div class="col">
-                  <h5>You have received a new notification!</h5>
-                  <p>Test notification!</p>
+                <textarea id="messageInput" cols="45"></textarea>
+                <div class="ms-auto" aria-hidden="true"
+                  style="margin-left: 10px">
+                  <input type="submit" value="Send">
                 </div>
               </div>
-
-              <br>
-
-              <div class="row ">
-                <div class="col-sm-2 text-center">
-                  <h1><i class="bi bi-bell-fill"></i></h1>
-                </div>
-                <div class="col">
-                  <h5>You have received a new notification!</h5>
-                  <p>Test notification!</p>
-                </div>
-              </div>
-
             </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="notesModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Notes</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex align-items-center">
+              <strong role="status">View Notes</strong>
+              <div class="ms-auto" aria-hidden="true">
+                <a href class="nav-ham-link" data-bs-toggle="modal"
+                  data-bs-target="#addNotesModal">Add New Note</a>
+              </div>
+            </div>
+            <br>
+            <div class="container-fluid">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Note #1 (8/5/2024)
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                      <div class="d-flex align-items-center">
+                        <p role="status">Note #1</p>
+                        <div class=" ms-auto" aria-hidden="true">
+                          <p>Date: (8/5/2024)</p>
+                        </div>
+                      </div>
+
+                      <p><em>Test note #1, test here.</em></p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                      aria-expanded="false" aria-controls="collapseTwo">
+                      Note #2 (8/6/2024)
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                      <div class="d-flex align-items-center">
+                        <p role="status">Note #2</p>
+                        <div class=" ms-auto" aria-hidden="true">
+                          <p>Date: (8/6/2024)</p>
+                        </div>
+                      </div>
+
+                      <p><em>Look towards creating a grandiose life.</em></p>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary"
+              data-bs-dismiss="modal">Close</button>
 
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="modal fade" id="messageModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Chats</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-              <div class="row msg align-items-center"
-                data-bs-target="#actualMessageModal" data-bs-toggle="modal">
-                <div class="col-sm-3 text-center"
-                  style="border-right: 1px solid black;">
-                  <h1><i class="bi bi-person-fill"></i></h1>
-                  <span>Jason Catadman</span>
-                </div>
-                <div class="col">
-                  <p><em>You: Sure sir Catadman. I will work on that right
-                      now.</em></p>
-                </div>
-              </div>
-
-              <br>
-
-              <div class="row unread msg align-items-center">
-                <div class="col-sm-3 text-center"
-                  style="border-right: 1px solid black;">
-                  <h1><i class="bi bi-person-fill"></i></h1>
-                  <span>Ceed Lorenzo</span>
-                </div>
-                <div class="col">
-                  <p><em>Lorenzo: Good afternoon sir, ask ko lang if available
-                      po
-                      si...</em></p>
-                </div>
-              </div>
-
-            </div>
-
+    <div class="modal fade" id="addNotesModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add a New
+              Note</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
           </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="actualMessageModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Chats</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
+          <div class="modal-body">
+            <form>
+              <label for="title">Title:</label>
+              <input type="text" class="form-control" name="title">
+              <label for="description">Description:</label>
+              <textarea class="form-control" name="description"></textarea>
             </div>
-            <div class="modal-body" id="chatBody">
-              <div class="time text-center grey">
-                2:09 PM - 8/11/2024
-              </div>
-              <br>
-              <div class="row sender">
-                <div class="col">
-                  <i class="bi bi-person-fill"></i>
-                  <div class="message">
-                    <span>Hi, this is Jason Catadman. I'd like to switch from
-                      Web
-                      Technologies to Software Engineering, thanks!</span>
-                  </div>
-                </div>
-              </div>
-              <br>
-              <div class="row receiver">
-                <div class="col">
-                  <div class="message">
-                    <span>Sure sir Catadman. I will work on that right
-                      now.</span>
-                  </div>
-                  <i class="bi bi-person"></i>
-                </div>
-              </div>
-              <br>
-            </div>
-
             <div class="modal-footer">
-              <form id="messageForm">
-                <div class="d-flex align-items-center">
-                  <textarea id="messageInput" cols="45"></textarea>
-                  <div class="ms-auto" aria-hidden="true"
-                    style="margin-left: 10px">
-                    <input type="submit" value="Send">
-                  </div>
-                </div>
-              </div>
+              <button type="button" class="btn btn-secondary"
+                data-bs-target="#notesModal"
+                data-bs-toggle="modal">Close</button>
+              <input type="submit" class="btn btn-primary" value="Submit">
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="remindersModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Reminders</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex align-items-center">
+              <strong role="status">View Reminders</strong>
+              <div class="ms-auto" aria-hidden="true">
+                <a href class="nav-ham-link" data-bs-toggle="modal"
+                  data-bs-target="#addReminderModal">Add New Reminder</a>
+              </div>
+            </div>
+            <br>
+            <div class="container-fluid">
+              <div class="accordion" id="reminderOne">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+
+                      <p>Pass documentary requirements <br>
+                        Due at: 11:59PM 8/11/2024</p> &nbsp; &nbsp;
+                      <span class="badge text-bg-danger">High</span>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse"
+                    data-bs-parent="#reminderOne">
+                    <div class="accordion-body">
+                      <p>Pass the documentary requirements to the
+                        registrar.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#reiminderTwo"
+                      aria-expanded="false" aria-controls="collapseTwo">
+                      <p>Pass documentary requirements <br> Due at: 11:59PM
+                        8/13/2024</p> &nbsp; &nbsp; <span
+                        class="badge text-bg-primary">Medium</span>
+                    </button>
+                  </h2>
+                  <div id="reiminderTwo" class="accordion-collapse collapse"
+                    data-bs-parent="#reiminderTwo">
+                    <div class="accordion-body">
+                      <p>Test requirement, haha.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#reiminderThree"
+                      aria-expanded="false" aria-controls="collapseTwo">
+                      <p>Consult a technical HR meeting <br> Due at: 4:00PM
+                        8/14/2024</p> &nbsp; &nbsp; <span
+                        class="badge text-bg-secondary">Low</span>
+                    </button>
+                  </h2>
+                  <div id="reiminderThree" class="accordion-collapse collapse"
+                    data-bs-parent="#reiminderThree">
+                    <div class="accordion-body">
+                      <p>Test meeting lods, haha.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary"
+              data-bs-dismiss="modal">Close</button>
 
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="modal fade" id="notesModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Notes</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="d-flex align-items-center">
-                <strong role="status">View Notes</strong>
-                <div class="ms-auto" aria-hidden="true">
-                  <a href class="nav-ham-link" data-bs-toggle="modal"
-                    data-bs-target="#addNotesModal">Add New Note</a>
-                </div>
-              </div>
-              <br>
-              <div class="container-fluid">
-                <div class="accordion" id="accordionExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                        aria-expanded="true" aria-controls="collapseOne">
-                        Note #1 (8/5/2024)
-                      </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-
-                        <div class="d-flex align-items-center">
-                          <p role="status">Note #1</p>
-                          <div class=" ms-auto" aria-hidden="true">
-                            <p>Date: (8/5/2024)</p>
-                          </div>
-                        </div>
-
-                        <p><em>Test note #1, test here.</em></p>
-
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                        aria-expanded="false" aria-controls="collapseTwo">
-                        Note #2 (8/6/2024)
-                      </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-
-                        <div class="d-flex align-items-center">
-                          <p role="status">Note #2</p>
-                          <div class=" ms-auto" aria-hidden="true">
-                            <p>Date: (8/6/2024)</p>
-                          </div>
-                        </div>
-
-                        <p><em>Look towards creating a grandiose life.</em></p>
-
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+    <div class="modal fade" id="addReminderModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add a New
+              Remider</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <label for="title">Title:</label>
+              <input type="text" class="form-control" name="title">
+              <label for="due">Due Date:</label>
+              <input type="date" class="form-control" name="due_date">
+              <label for="status">Status:</label>
+              <select class="form-control" name="status">
+                <option>Select an option below: </option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
+              <label for="description">Description:</label>
+              <textarea class="form-control" name="description"></textarea>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary"
-                data-bs-dismiss="modal">Close</button>
-
-            </div>
+                data-bs-target="#notesModal"
+                data-bs-toggle="modal">Close</button>
+              <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="modal fade" id="addNotesModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Add a New
-                Note</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <label for="title">Title:</label>
-                <input type="text" class="form-control" name="title">
-                <label for="description">Description:</label>
-                <textarea class="form-control" name="description"></textarea>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"
-                  data-bs-target="#notesModal"
-                  data-bs-toggle="modal">Close</button>
-                <input type="submit" class="btn btn-primary" value="Submit">
-              </form>
-            </div>
+    <div class="modal fade" id="cameraModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <script src="https://unpkg.com/html5-qrcode"></script>
+
+<div id="qr-reader" style="width:500px"></div>
+<div id="qr-reader-results"></div>
+
+<script>
+    var resultContainer = document.getElementById('qr-reader-results');
+var lastResult, countResults = 0;
+
+function onScanSuccess(decodedText, decodedResult) {
+    if (decodedText !== lastResult) {
+        ++countResults;
+        lastResult = decodedText;
+        // Handle on success condition with the decoded message.
+        console.log(`Scan result ${decodedText}`, decodedResult);
+    }
+}
+
+var html5QrcodeScanner = new Html5QrcodeScanner(
+    "qr-reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess);
+</script>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="modal fade" id="remindersModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Reminders</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="d-flex align-items-center">
-                <strong role="status">View Reminders</strong>
-                <div class="ms-auto" aria-hidden="true">
-                  <a href class="nav-ham-link" data-bs-toggle="modal"
-                    data-bs-target="#addReminderModal">Add New Reminder</a>
-                </div>
-              </div>
-              <br>
-              <div class="container-fluid">
-                <div class="accordion" id="reminderOne">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-
-                      <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                        aria-expanded="true" aria-controls="collapseOne">
-
-                        <p>Pass documentary requirements <br>
-                          Due at: 11:59PM 8/11/2024</p> &nbsp; &nbsp;
-                        <span class="badge text-bg-danger">High</span>
-                      </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse"
-                      data-bs-parent="#reminderOne">
-                      <div class="accordion-body">
-                        <p>Pass the documentary requirements to the
-                          registrar.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#reiminderTwo"
-                        aria-expanded="false" aria-controls="collapseTwo">
-                        <p>Pass documentary requirements <br> Due at: 11:59PM
-                          8/13/2024</p> &nbsp; &nbsp; <span
-                          class="badge text-bg-primary">Medium</span>
-                      </button>
-                    </h2>
-                    <div id="reiminderTwo" class="accordion-collapse collapse"
-                      data-bs-parent="#reiminderTwo">
-                      <div class="accordion-body">
-                        <p>Test requirement, haha.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#reiminderThree"
-                        aria-expanded="false" aria-controls="collapseTwo">
-                        <p>Consult a technical HR meeting <br> Due at: 4:00PM
-                          8/14/2024</p> &nbsp; &nbsp; <span
-                          class="badge text-bg-secondary">Low</span>
-                      </button>
-                    </h2>
-                    <div id="reiminderThree" class="accordion-collapse collapse"
-                      data-bs-parent="#reiminderThree">
-                      <div class="accordion-body">
-                        <p>Test meeting lods, haha.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary"
-                data-bs-dismiss="modal">Close</button>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="addReminderModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Add a New
-                Remider</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <label for="title">Title:</label>
-                <input type="text" class="form-control" name="title">
-                <label for="due">Due Date:</label>
-                <input type="date" class="form-control" name="due_date">
-                <label for="status">Status:</label>
-                <select class="form-control" name="status">
-                  <option>Select an option below: </option>
-                  <option value="High">High</option>
-                  <option value="Medium">Medium</option>
-                  <option value="Low">Low</option>
-                </select>
-                <label for="description">Description:</label>
-                <textarea class="form-control" name="description"></textarea>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"
-                  data-bs-target="#notesModal"
-                  data-bs-toggle="modal">Close</button>
-                <input type="submit" class="btn btn-primary" value="Submit">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <script>
+    <script>
 
 
 
@@ -597,7 +686,7 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
     </script>
 
-      <script>
+    <script>
 
 
   $(document).ready(function() {
@@ -607,16 +696,16 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
   </script>
 
-      <script
-        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"></script>
 
-      <script>
+    <script>
         
    
     function print(divId) {
@@ -653,4 +742,4 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
     }
 </script>
 
-    </html>
+  </html>
