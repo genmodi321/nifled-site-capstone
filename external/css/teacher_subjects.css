@@ -179,6 +179,17 @@ a{
     color: white;
 }
 
+.btn-csms-outlined{
+    background-color: white;
+ 
+    color: #415D43;
+}
+
+.btn-csms-outlined:hover{
+    border: 1px solid white;
+}
+
+
 td{
     border: 1px solid black;
 }
@@ -208,4 +219,17 @@ input[type=number] {
     background-color: transparent;
     border: none;
     outline: none;
+}
+
+.class-container{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #415D43;
+    background-color: #709775;
+    border-radius: 10px;
+    height: 50vh;
+    color: white;
 }
