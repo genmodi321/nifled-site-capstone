@@ -71,7 +71,7 @@ a{
     color: white !important;
     border-right: 1px solid white;
     background-color: #415D43;
-    height: auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,7 +110,6 @@ a{
     border-radius: 5%;
     margin: 10px;
     padding: 10px;
- 
 }
 
 .info-container:hover{
@@ -182,7 +181,6 @@ a{
 
 td{
     border: 1px solid black;
-    padding: 2px
 }
 
 .grey-bg{
@@ -190,23 +188,24 @@ td{
     color: white;
 }
 
-.attendance-container{
-    border: 1px solid black;
-    background-color:#709775;
-    border-radius: 10px;
-    padding: 10px;
-    color: white;
+.inputter{
+    padding: none !important;
+    margin: none !important;
+    width: 70%;
 }
 
-.liner{
-    border-bottom: 1px solid black !important;
-    background-color: black;
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.info{
-    display: none;
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
-.print-container{
-    margin: 20px;
+.grade{
+    background-color: transparent;
+    border: none;
+    outline: none;
 }

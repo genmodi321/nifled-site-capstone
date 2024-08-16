@@ -27,6 +27,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet">
 
+      <script src="https://unpkg.com/html5-qrcode"></script>
+
   </head>
 
   <body>
@@ -143,7 +145,7 @@
               </div>
               <br>
               <div class="d-flex align-items-center">
-                <h5 class="bold">Scan QR Code</h5>
+                <h5 class="bold"><span><i class="bi bi-arrow-left-circle-fill" onclick="redirect()"></i> </span> Scan QR Code</h5>
                 <div class="ms-auto text-center" aria-hidden="true">
                   <div class data-bs-toggle="modal"
                     data-bs-target="#cameraModal">
@@ -153,9 +155,19 @@
                 </div>
               </div>
 
-              <div class="container-fluid attendance-container text-center">
+              <div id="attendance"
+                class="container-fluid attendance-container text-center">
+                <br>
+                <p class="info">Western Mindano State University <br>
+                  College of Computing Studies <br>
+                  <span class="bold">Department of Information
+                    Technology</span><br>
+                  Zamboanga City
+                </p>
+                <br>
                 <div class="row">
                   <div class="col">
+
                     <p class="bold">Capstone I</p>
                   </div>
                   <div class="col">
@@ -163,6 +175,24 @@
                   </div>
                   <div class="col">
                     <p class="bold">August 15, 2024 <br> 11:00 PM</p>
+                    <p></p>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                  <div class="col">
+                    <p class="bold">Student Name</p>
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                    <p>Legend: </p>
+                    <p class="bold">Present - <i
+                        class="bi bi-check-square-fill"> </i> | Absent - <i
+                        class="bi bi-check-square-fill"> </i></p>
+
                   </div>
                 </div>
 
@@ -192,11 +222,12 @@
                   </div>
                 </div>
 
-                <div class="row text-center">
-                  <button>Print</button>
-                </div>
-
               </div>
+            </div>
+
+            <div class="container print-container text-center">
+              <button class="btn btn-csms"
+                onclick="print('attendance')">Print</button>
             </div>
 
           </div>
@@ -589,20 +620,22 @@
       </div>
     </div>
 
-    <div class="modal fade" id="cameraModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+    <div class="modal fade" id="cameraModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Scan QR Code for
+              Attendance</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            <script src="https://unpkg.com/html5-qrcode"></script>
+          <div class="modal-body text-center">
 
-<div id="qr-reader" style="width:500px"></div>
-<div id="qr-reader-results"></div>
+            <div class="container" id="qr-reader"></div>
+            <div id="qr-reader-results"></div>
 
-<script>
+            <script>
     var resultContainer = document.getElementById('qr-reader-results');
 var lastResult, countResults = 0;
 
@@ -610,19 +643,18 @@ function onScanSuccess(decodedText, decodedResult) {
     if (decodedText !== lastResult) {
         ++countResults;
         lastResult = decodedText;
-        // Handle on success condition with the decoded message.
         console.log(`Scan result ${decodedText}`, decodedResult);
     }
 }
 
 var html5QrcodeScanner = new Html5QrcodeScanner(
-    "qr-reader", { fps: 10, qrbox: 250 });
+    "qr-reader", { fps: 60, qrbox: 150 });
 html5QrcodeScanner.render(onScanSuccess);
 </script>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary"
+              data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -705,40 +737,57 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"></script>
 
+
+
     <script>
+
+      function redirect(){
+        window.location.href = "teacher_class_management.html";
+      }
         
    
     function print(divId) {
-        var divToPrint = document.getElementById(divId).innerHTML;
-        var iframe = document.createElement('iframe');
+      var divToPrint = document.getElementById(divId).innerHTML;
+    var iframe = document.createElement('iframe');
+    document.body.appendChild(iframe);
 
-        iframe.style.position = 'relative';
-        iframe.style.width = '0px';
-        iframe.style.height = '0px';
-        iframe.style.border = 'none';
+    var doc = iframe.contentDocument || iframe.contentWindow.document;
 
-        document.body.appendChild(iframe);
-
-        
-
-        var doc = iframe.contentDocument || iframe.contentWindow.document;
-
-        var link = doc.createElement('link');
+    // Apply Bootstrap CSS
+    var link = doc.createElement('link');
     link.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
     link.rel = "stylesheet";
     link.integrity = "sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH";
     link.crossOrigin = "anonymous";
+    doc.head.appendChild(link);
 
-        var style = doc.createElement('style');
-        style.textContent = 'table, td, tr, thead { border: 1px solid black; border-collapse: collapse; } td, th { padding: 8px; }';
-        doc.head.appendChild(style);
+    var link = doc.createElement('link');
+    link.href = "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css";
+    link.rel = "stylesheet";
+   
+    doc.head.appendChild(link);
 
-        doc.body.innerHTML = divToPrint;
+    // Custom styles for the print
+    var style = doc.createElement('style');
+    style.textContent = `
+    info{display: block}
+    body{text-align:center;}
+        .bold { font-weight: bold; }
+        hr.liner { border-top: 2px solid #000; }
+        .attendance-container{ margin: 20px; border: 1px solid black}
 
-        iframe.contentWindow.focus();
-        iframe.contentWindow.print();
+      
+    `;
+    doc.head.appendChild(style);
 
-        document.body.removeChild(iframe);
+    doc.body.innerHTML = divToPrint;
+
+    // Printing the content of the iframe
+    iframe.contentWindow.focus();
+    iframe.contentWindow.print();
+
+    // Removing the iframe after printing
+    document.body.removeChild(iframe);
     }
 </script>
 
