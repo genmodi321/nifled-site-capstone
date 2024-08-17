@@ -71,7 +71,7 @@ a{
     color: white !important;
     border-right: 1px solid white;
     background-color: #415D43;
-    height: auto;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

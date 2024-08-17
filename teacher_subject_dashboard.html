@@ -35,28 +35,28 @@
 
         <div class="col-md-2 sidebar text-center">
           <small id="currentTime"> </small>
-
           <img src="external/img/ccs_logo-removebg-preview.png"
             class="img-fluid logo space-sm">
           <h4 class="bold">Welcome, Jason!</h4>
 
           <div class="navigation-links" style="text-align: left;">
             <span><i class="bi bi-house"></i> Home</span>
-            <a href="index.html"><p><i class="bi bi-kanban"></i> Index</p></a>
+            <a href="teacher_dashboard.html"><p><i class="bi bi-kanban"></i> Index</p></a>
             <hr>
             <span><i class="bi bi-menu-button-wide"></i>
               Management</span>
-            <a href="teacher_class_management.html"><p><i
+            <a href="teacher_class_dashboard.html"><p><i
                   class="bi bi-book"></i> Classes
-              </p></a>
-            <a href="teacher_subject_management.html"><p><i
+                </p></a>
+            <a href="teacher_subject_dashboard.html"><p><i
                   class="bi bi-journals"></i> Subjects
-              </p></a>
-            <a href="teacher_class.html"><p><i class="bi bi-calendar-event"></i>
-                Class
-                Management</p></a>
-
+                </p></a>
             <hr>
+            <p><i class="bi bi-calendar-event"></i>
+                Class
+                Management</p>
+    
+         
           </div>
         </div>
 
@@ -132,7 +132,14 @@
                       to another day of making a
                       difference in our students'
                       lives.</p>
+
+                      <p class="fs-small mt-10"> <a
+                        href="teacher_dashboard.html"
+                        class="nav-ham-link">Home</a> /
+                    Subjects</p>
                   </h3>
+
+                  
 
                   <div class="ms-auto" aria-hidden="true">
                     <img
@@ -148,9 +155,29 @@
 
            <div class="container-fluid">
             <h5>Here are the subjects you are currently handling:</h5>
-            <div class="row">
-              <div class="col">
+            <br>
+            <div class="row text-center d-flex justify-content-center align-content-center">
+              <div class="col-md-3 class-container">
+                <p><i class="bi bi-journal-album"></i> <b> Subject:</b> Capstone 1 & Research</p>
+                <p><i class="bi bi-calendar"></i> <b> Class:</b> BSIT-4A </p>
+                <p><i class="bi bi-calendar"></i> <b> Semester:</b> 1st Semester </p>
+                <p><i class="bi bi-file-person"></i> <b> Students:</b> 50 </p>
+                <button class="btn btn-csms-outlined" onclick="gotoSubject()">Open</button>
                 
+              </div>
+              <div class="col-md-3 class-container">
+                <p><i class="bi bi-journal-album"></i> <b> Subject:</b> Capstone 1 & Research</p>
+                <p><i class="bi bi-calendar"></i> <b> Class:</b> BSIT-4A </p>
+                <p><i class="bi bi-calendar"></i> <b> Semester:</b> 1st Semester </p>
+                <p><i class="bi bi-file-person"></i> <b> Students:</b> 50 </p>
+                <button class="btn btn-csms-outlined"  onclick="gotoSubject()">Open</button>
+              </div>
+              <div class="col-md-3 class-container">
+                <p><i class="bi bi-journal-album"></i> <b> Subject:</b> Capstone 1 & Research</p>
+                <p><i class="bi bi-calendar"></i> <b> Class:</b> BSIT-4A </p>
+                <p><i class="bi bi-calendar"></i> <b> Semester:</b> 1st Semester </p>
+                <p><i class="bi bi-file-person"></i> <b> Students:</b> 50 </p>
+                <button class="btn btn-csms-outlined"  onclick="gotoSubject()">Open</button>
               </div>
             </div>
            </div>
@@ -611,6 +638,10 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
   $(document).ready(function() {
       $('#class').DataTable();
   });
+
+  function gotoSubject(){
+    window.location.href = "teacher_subject_management.html"
+  }
 
 
   </script>

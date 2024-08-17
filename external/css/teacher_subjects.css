@@ -71,7 +71,7 @@ a{
     color: white !important;
     border-right: 1px solid white;
     background-color: #415D43;
-
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,5 +231,60 @@ input[type=number] {
     background-color: #709775;
     border-radius: 10px;
     height: 50vh;
+    color: white;
+}
+
+.bordered{
+    background-color: #415D43;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+}
+
+.wide-btn{
+    width: 100%;
+}
+
+.bordered-none{
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #415D43;
+}
+
+.teacher-container{
+    margin-bottom: 20px;
+}
+
+.teacher-container-individual{
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-csms-1{
+    background-color: white;
+    border: 1px solid #709775;
+}
+
+.btn-csms-1:hover{
+    background-color: #709775;
+    color: white;
+    border: 1px solid white;
+}
+
+.teacher-container-individual:hover{
+    margin-bottom: 20px;
+    background-color: #709775;
+    color: white;
+}
+
+
+.student-container-individual{
+    margin-bottom: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.student-container-individual:hover{
+    background-color: #709775;
     color: white;
 }

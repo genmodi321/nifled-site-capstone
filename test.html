@@ -1,22 +1,58 @@
-<script src="https://unpkg.com/html5-qrcode"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Uploaded Files</title>
+</head>
+<body>
+    <form id="uploadForm">
+        <input type="file" id="fileInput" multiple>
+        <ul id="fileList"></ul>
+        <button type="submit">Upload</button>
+    </form>
 
-<div id="qr-reader" style="width:500px"></div>
-<div id="qr-reader-results"></div>
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
 
-<script>
-    var resultContainer = document.getElementById('qr-reader-results');
-var lastResult, countResults = 0;
+        fileInput.addEventListener('change', updateFileList);
 
-function onScanSuccess(decodedText, decodedResult) {
-    if (decodedText !== lastResult) {
-        ++countResults;
-        lastResult = decodedText;
-        // Handle on success condition with the decoded message.
-        console.log(`Scan result ${decodedText}`, decodedResult);
-    }
-}
+        function updateFileList() {
+            fileList.innerHTML = '';
 
-var html5QrcodeScanner = new Html5QrcodeScanner(
-    "qr-reader", { fps: 10, qrbox: 250 });
-html5QrcodeScanner.render(onScanSuccess);
-</script>
+            const files = Array.from(fileInput.files);
+
+            files.forEach((file, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = file.name;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.style.marginLeft = '10px';
+                removeButton.addEventListener('click', () => {
+                    removeFile(index);
+                });
+
+                listItem.appendChild(removeButton);
+                fileList.appendChild(listItem);
+            });
+        }
+
+        function removeFile(index) {
+            const dt = new DataTransfer();
+
+            const files = Array.from(fileInput.files);
+
+            files.forEach((file, i) => {
+                if (index !== i) {
+                    dt.items.add(file);
+                }
+            });
+
+            fileInput.files = dt.files;
+            updateFileList();
+        }
+    </script>
+</body>
+</html>
