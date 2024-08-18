@@ -75,6 +75,7 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height:auto;
 }
 
 .space-sm {
@@ -286,4 +287,11 @@ input[type=number] {
 .student-container-individual:hover{
     background-color: #709775;
     color: white;
+}
+
+.input-form{
+    width: 10%;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
 }

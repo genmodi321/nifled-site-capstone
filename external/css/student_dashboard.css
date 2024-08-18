@@ -43,8 +43,8 @@ a{
 }
 
 .small-logo {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     background-color: white;
     border-radius: 100%;
 
@@ -64,7 +64,7 @@ a{
 
 .whole-container {
     background-color: #709775;
-  
+    min-height: 100vh;
 }
 
 .sidebar {
@@ -72,6 +72,7 @@ a{
     border-right: 1px solid white;
     background-color: #415D43;
     display: flex;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -174,116 +175,74 @@ a{
 }
 
 .btn-csms{
-    background-color: #709775;
+    background-color: #415D43;
     color: white;
 }
 
-.btn-csms-outlined{
-    background-color: white;
- 
-    color: #415D43;
+.dd-menu{
+    margin-left: 10px !important
 }
 
-.btn-csms-outlined:hover{
-    border: 1px solid white;
+.dropdown-item{
+    color: black !important;
 }
 
-
-td{
-    border: 1px solid black;
-}
-
-.grey-bg{
-    background-color: gray;
-    color: white;
-}
-
-.inputter{
-    padding: none !important;
-    margin: none !important;
-    width: 70%;
-}
-
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-.grade{
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-
-.class-container{
-    margin: 20px;
+.container-bordered{
+    border: 1px solid black;    
+    margin-left: 10px;
+    padding: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    border: 1px solid #415D43;
-    background-color: #709775;
-    border-radius: 10px;
-    height: 50vh;
+}
+
+.qr-code{
+    height: 75px;
+    width: 75px;
+}
+
+.missed{
+    color: red;
+}
+
+.cb-hover{
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cb-hover:hover{
+    background-color: #415D43;
     color: white;
 }
 
 .bordered{
-    background-color: #415D43;
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid white;
-    color: white;
+    margin-top: 25px;
+    border: 1px solid black;
 }
 
-.wide-btn{
-    width: 100%;
+.subject-container{
+    padding: 20px;
+    border: 1px solid black;
+    margin-left: 20px;
 }
 
-.bordered-none{
-    background-color: white;
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #415D43;
+.form-container{
+
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
 }
 
-.teacher-container{
-    margin-bottom: 20px;
+.input-form{
+    width: 100% !important;
+    border: none;
+    border-bottom: 1px solid black;
 }
 
-.teacher-container-individual{
-    transition: background-color 0.2s ease, color 0.2s ease;
+.input-form:focus{
+    outline: none;
 }
 
-.btn-csms-1{
-    background-color: white;
-    border: 1px solid #709775;
-}
-
-.btn-csms-1:hover{
-    background-color: #709775;
-    color: white;
-    border: 1px solid white;
-}
-
-.teacher-container-individual:hover{
-    margin-bottom: 20px;
-    background-color: #709775;
-    color: white;
-}
-
-
-.student-container-individual{
-    margin-bottom: 10px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.student-container-individual:hover{
-    background-color: #709775;
-    color: white;
+.save-btn{
+    width: 100% !important;
 }

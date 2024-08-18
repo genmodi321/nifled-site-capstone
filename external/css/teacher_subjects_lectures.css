@@ -287,3 +287,10 @@ input[type=number] {
     background-color: #709775;
     color: white;
 }
+
+.file-container{
+    border: 1px solid #415D43;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}

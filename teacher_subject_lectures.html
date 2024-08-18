@@ -15,7 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link
-      href="external/css/teacher_subjects.css"
+      href="external/css/teacher_subjects_lectures.css"
       rel="stylesheet">
 
     <link rel="icon" type="image/png" sizes="32x32"
@@ -142,7 +142,7 @@
                         class="nav-ham-link">Subjects</a> / <span
                         class="nav-ham-link">Capstone 1 & Research</span> /
                       <span
-                        class="nav-ham-link">Students</span></p>
+                        class="nav-ham-link">Lectures</span></p>
                   </h3>
 
                   <div class="ms-auto" aria-hidden="true">
@@ -155,89 +155,132 @@
 
               <hr>
               <div class="container">
-                <h5 class="bold" onclick="goBack()"><i
-                    class="bi bi-arrow-left"></i> Back</h5>
-              </div>
-
-              <div class="container">
-                <div class="row">
-                  <h5>Manage:</h5>
-                  <div class="col">
-                    <button class="btn wide-btn btn-csms-1"
-                      onclick="gotoPeople()">Students</button>
-                  </div>
-                  <div class="col">
-                    <button class="btn wide-btn btn-csms-1"
-                      onclick="gotoActivity()">Activity</button>
-                  </div>
-                  <div class="col">
-                    <div class="dropdown">
-                      <button class="btn wide-btn btn-csms-1" href="#"
-                        role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Grades
-                      </button>
-
-                      <ul class="dropdown-menu text-center container">
-                        <li><a class="dropdown-item"
-                            href="teacher_subject_management_activity_grading.html" style="color:black !important;">Activities</a></li>
-                        <li><a href="teacher_subject_grades.html" class="dropdown-item" style="color:black !important;" href="#">Grades</a></li>
-
-                      </ul>
+                <div class="d-flex align-items-center">
+                    <h5 class="bold" onclick="goBack()"><i
+                        class="bi bi-arrow-left"></i> Back</h5>
+                    <div class="ms-auto text-center">
+                       <button class="btn btn-csms" data-bs-target="#addResourceModal" data-bs-toggle="modal"> <i class="bi bi-plus-circle-fill"></i> Add New Resource</button>
                     </div>
-
-                  </div>
-                  <div class="col">
-                    <button class="btn wide-btn btn-csms-1"
-                      onclick="goToLectures()">Lectures</button>
-                  </div>
-                </div>
-                <hr>
-
-                <div class="container-fluid teacher-container">
-
-                  <h5>Teacher</h5>
-
-                  <div
-                    class="container-fluid bordered-none align-middle teacher-container-individual">
-                    <h5><i class="bi bi-person-fill"></i> Jason Catadman </h5>
-                  </div>
                 </div>
 
-                <div class="container-fluid student-container">
-                  <h5>Students</h5>
-                  <div
-                    class="container-fluid bordered-none align-middle student-container-individual">
-                    <h5><i class="bi bi-mortarboard-fill"></i> Jason Catadman
-                    </h5>
-                  </div>
-
-                  <div
-                    class="container-fluid bordered-none align-middle student-container-individual">
-                    <h5><i class="bi bi-mortarboard-fill"></i> Jason Catadman
-                    </h5>
-                  </div>
-
-                  <div
-                    class="container-fluid bordered-none align-middle student-container-individual">
-                    <h5><i class="bi bi-mortarboard-fill"></i> Jason Catadman
-                    </h5>
-                  </div>
-
-                  <div
-                    class="container-fluid bordered-none align-middle student-container-individual">
-                    <h5><i class="bi bi-mortarboard-fill"></i> Jason Catadman
-                    </h5>
-                  </div>
-
-                  <div
-                    class="container-fluid bordered-none align-middle student-container-individual">
-                    <h5><i class="bi bi-mortarboard-fill"></i> Jason Catadman
-                    </h5>
-                  </div>
-
-                </div>
+               
               </div>
+
+              <br>
+
+              <div class="container file-container">
+                <div class="row">
+                    <div class="col-sm-1 text-center">
+                        <h1 class="bi bi-file-pdf" style="font-size:64px;"></h1>
+                    </div>
+                    <div class="col">
+                       
+                        <div class="d-flex align-items-center">
+                            <h5>Lecture 1: Basics of Capstone</h5>
+                            <div class="ms-auto text-center">
+                                <p class=bold>8/17/2024</p>
+                                <a download="test_document.pdf" href="test_document.pdf" style="color: black !important"> <h5 class="bi bi-download bold"></h5></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="container file-container">
+                <div class="row">
+                    <div class="col-sm-1 text-center">
+                        <h1 class="bi bi-camera-video" style="font-size:64px;"></h1>
+                    </div>
+                    <div class="col">
+                       
+                        <div class="d-flex align-items-center">
+                            <h5>Lecture 2: How to make an RRL</h5>
+                            <div class="ms-auto text-center">
+                                <p class=bold>8/17/2024</p>
+                                <h5 class="bi bi-download bold"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="container file-container">
+                <div class="row">
+                    <div class="col-sm-1 text-center">
+                        <h1 class="bi bi-file-word" style="font-size:64px;"></h1>
+                    </div>
+                    <div class="col">
+                       
+                        <div class="d-flex align-items-center">
+                            <h5>Lecture 3: Activity Guide: Creating an RRL</h5>
+                            <div class="ms-auto text-center">
+                                <p class=bold>8/17/2024</p>
+                                <h5 class="bi bi-download bold"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container file-container">
+                <div class="row">
+                    <div class="col-sm-1 text-center">
+                        <h1 class="bi bi-file-pdf" style="font-size:64px;"></h1>
+                    </div>
+                    <div class="col">
+                       
+                        <div class="d-flex align-items-center">
+                            <h5>Lecture 1: Basics of Capstone</h5>
+                            <div class="ms-auto text-center">
+                                <p class=bold>8/17/2024</p>
+                                <h5 class="bi bi-download bold"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="container file-container">
+                <div class="row">
+                    <div class="col-sm-1 text-center">
+                        <h1 class="bi bi-camera-video" style="font-size:64px;"></h1>
+                    </div>
+                    <div class="col">
+                       
+                        <div class="d-flex align-items-center">
+                            <h5>Lecture 2: How to make an RRL</h5>
+                            <div class="ms-auto text-center">
+                                <p class=bold>8/17/2024</p>
+                                <h5 class="bi bi-download bold"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="container file-container">
+                <div class="row">
+                    <div class="col-sm-1 text-center">
+                        <h1 class="bi bi-file-word" style="font-size:64px;"></h1>
+                    </div>
+                    <div class="col">
+                       
+                        <div class="d-flex align-items-center">
+                            <h5>Lecture 3: Activity Guide: Creating an RRL</h5>
+                            <div class="ms-auto text-center">
+                                <p class=bold>8/17/2024</p>
+                                <h5 class="bi bi-download bold"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             </div>
 
           </div>
@@ -631,6 +674,38 @@
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="addResourceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Upload a New Learning Material</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="uploadResourceForm">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title:</label>
+              <input type="text" class="form-control" name="title" id="title" placeholder="Enter resource title" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="resourceFile" class="form-label">Upload File:</label>
+              <input type="file" class="form-control" name="resourceFile" id="resourceFile" accept=".pdf,.doc,.docx,.ppt,.pptx,.mp4,.zip" required>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <input type="submit" class="btn btn-primary" value="Upload">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
 
   <script>
 
