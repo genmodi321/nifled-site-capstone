@@ -327,3 +327,9 @@ input[type=number] {
     background-color: #415D43;
     color: white;
 }
+
+
+.btn-csms-outline{
+    border: 1px solid white;
+    color: white !important;
+}

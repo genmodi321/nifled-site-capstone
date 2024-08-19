@@ -50,10 +50,12 @@
                         <hr>
                         <span><i class="bi bi-menu-button-wide"></i>
                             Management</span>
-                        <a href="teacher_class_dashboard.html"><p><i
-                                    class="bi bi-book"></i> Courses
+                        <a href=""          data-bs-toggle="collapse"
+                        data-bs-target="#subjects"><p><i
+                                    class="bi bi-book"></i> Subjects
                             </p></a>
-                        <a href="teacher_subject_dashboard.html"><p><i
+                        <a data-bs-toggle="collapse"
+                        data-bs-target="#activities" ><p><i
                                     class="bi bi-journals"></i> Activities
                             </p></a>
                         <hr>
@@ -166,6 +168,7 @@
                                             to another day of studying and
                                             working hard
                                             to be succesful!</p>
+                                            <p class="fs-small mt-10">Home /  <a href="student_dashboard.html" class="nav-ham-link">Index</a> </p>
                                     </h3>
 
                                     <div class="ms-auto" aria-hidden="true">
@@ -177,31 +180,47 @@
                             </div>
                             <hr>
                             <div class="row text-center">
-                                <div class="col container-bordered">
+                                <div class="col container-bordered"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#subjectsModal">
                                     <h5>No. of Subjects (2)</h5>
                                     <ul>
-                                        <li> Capstone 1 and Research</li>
-                                        <li> Software Engineering</li>
+                                        <li>Capstone 1 and Research</li>
+                                        <li>Software Engineering</li>
                                     </ul>
+
                                 </div>
-                                <div class="col container-bordered">
+
+                                <div class="col container-bordered"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#pendingActivitiesModal">
                                     <h5>Pending Activities</h5>
                                     <ul>
                                         <li>Activity 2: Host your Website (Due
                                             on 8/19/2024)</li>
+                                            
                                     </ul>
                                 </div>
-                                <div class="col container-bordered">
+
+                                <div class="col container-bordered"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#missedActivitiesModal">
                                     <h5>Missed Activities</h5>
                                     <ul>
                                         <li class="missed">Activity 1: Make a
                                             Website</li>
                                     </ul>
+
                                 </div>
+
                                 <div class="col container-bordered">
                                     <h5>Student QR Code</h5>
                                     <img src="external/img/download (2).png"
-                                        class="img-fluid qr-code">
+                                        class="img-fluid qr-code"
+                                        alt="Student QR Code"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#qrCodeModal">
+
                                 </div>
                             </div>
                             <br>
@@ -226,16 +245,11 @@
                                     data-bs-target="#activities">
                                     Activities
                                 </div>
+                             
                                 <div
                                     class="col-sm-2 container-bordered  cb-hover"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#attendance">
-                                    Attendance
-                                </div>
-                                <div
-                                    class="col-sm-2 container-bordered  cb-hover"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#grades">
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#gradesModal">
                                     Grades
                                 </div>
                             </div>
@@ -301,14 +315,9 @@
                                                         <h5
                                                             class="card-title">Capstone
                                                             Project</h5>
-                                                        <p
-                                                            class="card-text">Some
-                                                            quick example text
-                                                            to build on the card
-                                                            title and make up
-                                                            the bulk of the
-                                                            card's content.</p>
-                                                        <a href="#"
+                                                      
+                                                        <a
+                                                            href="student_classes.html"
                                                             class="btn btn-primary"><i
                                                                 class="bi bi-door-open-fill"></i>
                                                             Go to Class</a>
@@ -321,14 +330,9 @@
                                                         <h5
                                                             class="card-title">Advanced
                                                             Database</h5>
-                                                        <p
-                                                            class="card-text">Some
-                                                            quick example text
-                                                            to build on the card
-                                                            title and make up
-                                                            the bulk of the
-                                                            card's content.</p>
-                                                        <a href="#"
+                                                      
+                                                        <a
+                                                            href="student_classes.html"
                                                             class="btn btn-primary"><i
                                                                 class="bi bi-door-open-fill"></i>
                                                             Go to Class</a>
@@ -341,14 +345,9 @@
                                                         <h5
                                                             class="card-title">Software
                                                             Engineering</h5>
-                                                        <p
-                                                            class="card-text">Some
-                                                            quick example text
-                                                            to build on the card
-                                                            title and make up
-                                                            the bulk of the
-                                                            card's content.</p>
-                                                        <a href="#"
+                                                       
+                                                        <a
+                                                            href="student_classes.html"
                                                             class="btn btn-primary"><i
                                                                 class="bi bi-door-open-fill"></i>
                                                             Go to Class</a>
@@ -398,31 +397,24 @@
                                     </div>
                                 </div>
 
-                                <div
-                                    class="container-fluid accordion-collapse collapse bordered"
-                                    id="activities"
-                                    data-bs-parent="#shortcutLinks">
+                          
+
+                                <div class="container-fluid accordion-collapse collapse bordered" id="activities" data-bs-parent="#shortcutLinks">
                                     <div class="accordion-body">
-                                        <strong>This is the first item's
-                                            accordion
-                                            body.</strong> It is shown by
-                                        default,
-                                        until the collapse plugin adds the
-                                        appropriate classes that we use to style
-                                        each element. These classes control the
-                                        overall appearance, as well as the
-                                        showing
-                                        and hiding via CSS transitions. You can
-                                        modify any of this with custom CSS or
-                                        overriding our default variables. It's
-                                        also
-                                        worth noting that just about any HTML
-                                        can go
-                                        within the <code>.accordion-body</code>,
-                                        though the transition does limit
-                                        overflow.
+                                        <h5>Subject: Capstone 1 & Research</h5>
+                                        <p>Activities List:</p>
+                                        <ul>
+                                            <li>Activity 1: Create a Prototype</li>
+                                            <li>Activity 2: Create your chapter 2 and 3</li>
+                                        </ul>
+                                        <p>
+                                            <a href="student_classes.html#activity" class="btn btn-primary">View Details</a>
+                                        </p>
                                     </div>
                                 </div>
+                                
+
+                             
 
                             </div>
 
@@ -925,31 +917,34 @@
                         <div class="modal-body">
                             <div class="form-container">
                                 <form>
-                                    <label>Full Name:</label>  <br> 
-                                        <input type="text"
-                                            class="input-form"> <br> 
-                                    <label>Address:</label>    <br> 
-                                        <input type="address"
-                                            class="input-form"><br> 
-                                    <label>Mobile Number:</label>    <br> 
-                                        <input type="text"
-                                            class="input-form" value="+63">  <br> 
-                                    <label>Emergency Number:</label>    <br> 
-                                        <input type="text"
-                                            class="input-form" value="+63"> <br> 
-                                            <label>Gender:</label>    <br> 
-                                            <select class="input-form"><br> 
-                                                <option value="Male"> Male </option>
-                                                <option value="Female"> Female </option>
-                                                <option value="Rather not Say"> Rather not Say </option>
-                                            </select> <br>      <br>
-                                      
-                                            <input type="submit" class="btn btn-primary save-btn" value="Save">
-                                       
-                                        </form>
+                                    <label>Full Name:</label> <br>
+                                    <input type="text"
+                                        class="input-form"> <br>
+                                    <label>Address:</label> <br>
+                                    <input type="address"
+                                        class="input-form"><br>
+                                    <label>Mobile Number:</label> <br>
+                                    <input type="text"
+                                        class="input-form" value="+63"> <br>
+                                    <label>Emergency Number:</label> <br>
+                                    <input type="text"
+                                        class="input-form" value="+63"> <br>
+                                    <label>Gender:</label> <br>
+                                    <select class="input-form"><br>
+                                        <option value="Male"> Male </option>
+                                        <option value="Female"> Female </option>
+                                        <option value="Rather not Say"> Rather
+                                            not Say </option>
+                                    </select> <br> <br>
+
+                                    <input type="submit"
+                                        class="btn btn-primary save-btn"
+                                        value="Save">
+
+                                </form>
                             </div>
                         </div>
-                    
+
                     </div>
                 </div>
             </div>
@@ -969,98 +964,549 @@
                             <div class="form-container">
                                 <form>
                                     <label>Old Password:</label> <br>
-                                    <input type="password" class="input-form" id="oldPassword" placeholder="Enter old password"> 
-                                    <input type="checkbox" onclick="togglePasswordVisibility('oldPassword')"> Show Password
+                                    <input type="password" class="input-form"
+                                        id="oldPassword"
+                                        placeholder="Enter old password">
+                                    <input type="checkbox"
+                                        onclick="togglePasswordVisibility('oldPassword')">
+                                    Show Password
                                     <br><br>
-                                
+
                                     <label>New Password:</label> <br>
-                                    <input type="password" class="input-form" id="newPassword" placeholder="Enter new password">
-                                    <input type="checkbox" onclick="togglePasswordVisibility('newPassword')"> Show Password
+                                    <input type="password" class="input-form"
+                                        id="newPassword"
+                                        placeholder="Enter new password">
+                                    <input type="checkbox"
+                                        onclick="togglePasswordVisibility('newPassword')">
+                                    Show Password
                                     <br><br>
-                                
+
                                     <label>Re-enter New Password:</label> <br>
-                                    <input type="password" class="input-form" id="reenterPassword" placeholder="Re-enter new password">
-                                    <input type="checkbox" onclick="togglePasswordVisibility('reenterPassword')"> Show Password
+                                    <input type="password" class="input-form"
+                                        id="reenterPassword"
+                                        placeholder="Re-enter new password">
+                                    <input type="checkbox"
+                                        onclick="togglePasswordVisibility('reenterPassword')">
+                                    Show Password
                                     <br><br>
-                                
-                                    <input type="submit" class="btn btn-primary save-btn" value="Save">
+
+                                    <input type="submit"
+                                        class="btn btn-primary save-btn"
+                                        value="Save">
                                 </form>
-                                
+
                             </div>
                         </div>
-                    
+
                     </div>
                 </div>
             </div>
 
-            <div class="modal fade" id="updateCourseYearModal" tabindex="-1" aria-labelledby="updateCourseYearLabel" aria-hidden="true">
+            <div class="modal fade" id="updateCourseYearModal" tabindex="-1"
+                aria-labelledby="updateCourseYearLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="updateCourseYearLabel">Update Course & Year</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h1 class="modal-title fs-5"
+                                id="updateCourseYearLabel">Update Course &
+                                Year</h1>
+                            <button type="button" class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form id="courseYearForm">
                                 <div class="mb-3">
-                                    <label for="courseInput" class="form-label">Course</label>
-                                    <input type="text" class="form-control" id="courseInput" placeholder="Enter your course">
+                                    <label for="courseInput"
+                                        class="form-label">Course</label>
+                                    <input type="text" class="form-control"
+                                        id="courseInput"
+                                        placeholder="Enter your course">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="yearLevelInput" class="form-label">Year Level</label>
-                                    <select class="form-select" id="yearLevelInput">
-                                        <option selected>Select year level</option>
-                                        <option value="1st Year">1st Year</option>
-                                        <option value="2nd Year">2nd Year</option>
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
+                                    <label for="yearLevelInput"
+                                        class="form-label">Year Level</label>
+                                    <select class="form-select"
+                                        id="yearLevelInput">
+                                        <option selected>Select year
+                                            level</option>
+                                        <option value="1st Year">1st
+                                            Year</option>
+                                        <option value="2nd Year">2nd
+                                            Year</option>
+                                        <option value="3rd Year">3rd
+                                            Year</option>
+                                        <option value="4th Year">4th
+                                            Year</option>
                                     </select>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="saveCourseYear()">Save changes</button>
+                            <button type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary"
+                                onclick="saveCourseYear()">Save changes</button>
                         </div>
                     </div>
                 </div>
             </div>
-            
 
-            <div class="modal fade" id="updateProfilePictureModal" tabindex="-1" aria-labelledby="updateProfilePictureLabel" aria-hidden="true">
+            <div class="modal fade" id="updateProfilePictureModal" tabindex="-1"
+                aria-labelledby="updateProfilePictureLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="updateProfilePictureLabel">Update Profile Picture</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h1 class="modal-title fs-5"
+                                id="updateProfilePictureLabel">Update Profile
+                                Picture</h1>
+                            <button type="button" class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form id="profilePictureForm">
                                 <div class="mb-3">
-                                    <label for="profilePictureInput" class="form-label">Upload New Profile Picture</label>
-                                    <input type="file" class="form-control" id="profilePictureInput" accept="image/*">
+                                    <label for="profilePictureInput"
+                                        class="form-label">Upload New Profile
+                                        Picture</label>
+                                    <input type="file" class="form-control"
+                                        id="profilePictureInput"
+                                        accept="image/*">
                                 </div>
-                            
-                                <div class="row  d-flex justify-content-center">
-                                    <div class="col text-center">
+
+                                <div class="row">
+                                    <div
+                                        class="col text-center  d-flex justify-content-center flex-column align-items-center ">
                                         <h5>Previous Profile Picture</h5>
-                                        <img id="previousProfilePicture" src="https://i.pinimg.com/736x/79/5f/6a/795f6a68557b26980f241deb6dd7d452.jpg" alt="Previous Profile Picture" class="img-fluid rounded-circle" style="max-width: 75px;">
+                                        <img id="previousProfilePicture"
+                                            src="https://i.pinimg.com/736x/79/5f/6a/795f6a68557b26980f241deb6dd7d452.jpg"
+                                            alt="Previous Profile Picture"
+                                            class="img-fluid rounded-circle"
+                                            style="max-width: 75px;">
                                     </div>
-                                    <div class="col text-center">
+                                    <div
+                                        class="col text-center  d-flex justify-content-center flex-column align-items-center ">
                                         <h5>New Profile Picture Preview</h5>
-                                        <img id="profilePicturePreview" src="#" alt="Profile Picture Preview" class="img-fluid rounded-circle" style="max-width: 75px; display: none;">
+                                        <img id="profilePicturePreview" src="#"
+                                            alt="Profile Picture Preview"
+                                            class="img-fluid rounded-circle"
+                                            style="max-width: 75px; display: none;">
                                     </div>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary">Reset Picture</button>
-                            <button type="button" class="btn btn-primary" onclick="saveProfilePicture()">Save changes</button>
+                            <button type="button"
+                                class="btn btn-secondary">Reset Picture</button>
+                            <button type="button" class="btn btn-primary"
+                                onclick="saveProfilePicture()">Save
+                                changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="subjectsModal" tabindex="-1" aria-labelledby="subjectsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="subjectsModalLabel">No. of Subjects</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li>Capstone 1 and Research</li>
+                                <li>Software Engineering</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
             
+       
+            <div class="modal fade" id="pendingActivitiesModal" tabindex="-1" aria-labelledby="pendingActivitiesModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="pendingActivitiesModalLabel">Pending Activities</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li>Activity 2: Host your Website (Due on 8/19/2024)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+   
+            <div class="modal fade" id="missedActivitiesModal" tabindex="-1" aria-labelledby="missedActivitiesModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="missedActivitiesModalLabel">Missed Activities</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li class="missed">Activity 1: Make a Website</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="qrCodeModalLabel">Student QR Code</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="external/img/download (2).png" class="img-fluid" alt="Student QR Code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="gradesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Grades</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                  <div class="container">
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="subject-title bold">Subject Code: IT 01<br>Course: Capstone 1 & Research</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>Q1</th>
+                        <th>Q2</th>
+                        <th>Q3</th>
+                        <th>Q4</th>
+                        <th>Q5</th>
+                        <th>Q6</th>
+                        <th class="total-column">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="criteria">Quizzes (30%)</td>
+                        <td>15/20</td>
+                        <td>18/20</td>
+                        <td>20/20</td>
+                        <td>16/20</td>
+                        <td>17/25</td>
+                        <td>20/25</td>
+                        <td class="total-column">83%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Activities (20%)</td>
+                        <td>18/20</td>
+                        <td>19/20</td>
+                        <td>20/20</td>
+                        <td>17/20</td>
+                        <td>17/20</td>
+                        <td>16/20</td>
+                        <td colspan="2" class="total-column">90%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Project Based (30%)</td>
+                        <td>28/30</td>
+                        <td>27/30</td>
+                        <td>29/30</td>
+                        <td>25/30</td>
+                        <td>26/30</td>
+                        <td>30/30</td>
+                        <td class="total-column">93%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Midterms (15%)</td>
+                        <td>13/15</td>
+                        <td>12/15</td>
+                        <td>14/15</td>
+                        <td>13/15</td>
+                        <td>12/15</td>
+                        <td>14/15</td>
+                        <td class="total-column">87%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Finals (5%)</td>
+                        <td>4/5</td>
+                        <td>5/5</td>
+                        <td>4.5/5</td>
+                        <td>4/5</td>
+                        <td>4/5</td>
+                        <td>5/5</td>
+                        <td class="total-column">91%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Total Average</td>
+                        <td colspan="6"></td>
+                        <td class="total-column">
+                            (1.75) 88.8%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <div class="col-md-6">
+            <div class="subject-title bold">Subject Code: IT 02<br>Course: Software Engineering</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>Q1</th>
+                        <th>Q2</th>
+                        <th>Q3</th>
+                        <th>Q4</th>
+                        <th>Q5</th>
+                        <th>Q6</th>
+                        <th class="total-column">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="criteria">Quizzes (30%)</td>
+                        <td>15/20</td>
+                        <td>18/20</td>
+                        <td>20/20</td>
+                        <td>16/20</td>
+                        <td>17/25</td>
+                        <td>20/25</td>
+                        <td class="total-column">83%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Activities (20%)</td>
+                        <td>18/20</td>
+                        <td>19/20</td>
+                        <td>20/20</td>
+                        <td>17/20</td>
+                        <td>17/20</td>
+                        <td>16/20</td>
+                        <td colspan="2" class="total-column">90%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Project Based (30%)</td>
+                        <td>28/30</td>
+                        <td>27/30</td>
+                        <td>29/30</td>
+                        <td>25/30</td>
+                        <td>26/30</td>
+                        <td>30/30</td>
+                        <td class="total-column">93%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Midterms (15%)</td>
+                        <td>13/15</td>
+                        <td>12/15</td>
+                        <td>14/15</td>
+                        <td>13/15</td>
+                        <td>12/15</td>
+                        <td>14/15</td>
+                        <td class="total-column">87%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Finals (5%)</td>
+                        <td>4/5</td>
+                        <td>5/5</td>
+                        <td>4.5/5</td>
+                        <td>4/5</td>
+                        <td>4/5</td>
+                        <td>5/5</td>
+                        <td class="total-column">91%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Total Average</td>
+                        <td colspan="6"></td>
+                        <td class="total-column">
+                            (1.75) 88.8%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        
+
+    
+    </div>
+
+    <br>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="subject-title bold">Subject Code: IT 03<br>Course: Advanced Database</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>Q1</th>
+                        <th>Q2</th>
+                        <th>Q3</th>
+                        <th>Q4</th>
+                        <th>Q5</th>
+                        <th>Q6</th>
+                        <th class="total-column">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="criteria">Quizzes (30%)</td>
+                        <td>15/20</td>
+                        <td>18/20</td>
+                        <td>20/20</td>
+                        <td>16/20</td>
+                        <td>17/25</td>
+                        <td>20/25</td>
+                        <td class="total-column">83%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Activities (20%)</td>
+                        <td>18/20</td>
+                        <td>19/20</td>
+                        <td>20/20</td>
+                        <td>17/20</td>
+                        <td>17/20</td>
+                        <td>16/20</td>
+                        <td colspan="2" class="total-column">90%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Project Based (30%)</td>
+                        <td>28/30</td>
+                        <td>27/30</td>
+                        <td>29/30</td>
+                        <td>25/30</td>
+                        <td>26/30</td>
+                        <td>30/30</td>
+                        <td class="total-column">93%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Midterms (15%)</td>
+                        <td>13/15</td>
+                        <td>12/15</td>
+                        <td>14/15</td>
+                        <td>13/15</td>
+                        <td>12/15</td>
+                        <td>14/15</td>
+                        <td class="total-column">87%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Finals (5%)</td>
+                        <td>4/5</td>
+                        <td>5/5</td>
+                        <td>4.5/5</td>
+                        <td>4/5</td>
+                        <td>4/5</td>
+                        <td>5/5</td>
+                        <td class="total-column">91%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Total Average</td>
+                        <td colspan="6"></td>
+                        <td class="total-column">
+                            (1.75) 88.8%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <div class="col-md-6">
+            <div class="subject-title bold">Subject Code: IT 04<br>Course: Networking</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>Q1</th>
+                        <th>Q2</th>
+                        <th>Q3</th>
+                        <th>Q4</th>
+                        <th>Q5</th>
+                        <th>Q6</th>
+                        <th class="total-column">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="criteria">Quizzes (30%)</td>
+                        <td>15/20</td>
+                        <td>18/20</td>
+                        <td>20/20</td>
+                        <td>16/20</td>
+                        <td>17/25</td>
+                        <td>20/25</td>
+                        <td class="total-column">83%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Activities (20%)</td>
+                        <td>18/20</td>
+                        <td>19/20</td>
+                        <td>20/20</td>
+                        <td>17/20</td>
+                        <td>17/20</td>
+                        <td>16/20</td>
+                        <td colspan="2" class="total-column">90%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Project Based (30%)</td>
+                        <td>28/30</td>
+                        <td>27/30</td>
+                        <td>29/30</td>
+                        <td>25/30</td>
+                        <td>26/30</td>
+                        <td>30/30</td>
+                        <td class="total-column">93%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Midterms (15%)</td>
+                        <td>13/15</td>
+                        <td>12/15</td>
+                        <td>14/15</td>
+                        <td>13/15</td>
+                        <td>12/15</td>
+                        <td>14/15</td>
+                        <td class="total-column">87%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Finals (5%)</td>
+                        <td>4/5</td>
+                        <td>5/5</td>
+                        <td>4.5/5</td>
+                        <td>4/5</td>
+                        <td>4/5</td>
+                        <td>5/5</td>
+                        <td class="total-column">91%</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria">Total Average</td>
+                        <td colspan="6"></td>
+                        <td class="total-column">
+                            (1.75) 88.8%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        
+
+    
+    </div>
+
+</div>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
 
             <script>
 

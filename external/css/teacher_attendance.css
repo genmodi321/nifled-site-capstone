@@ -210,3 +210,9 @@ td{
 .print-container{
     margin: 20px;
 }
+
+
+.btn-csms-outline{
+    border: 1px solid white;
+    color: white !important;
+}

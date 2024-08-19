@@ -283,29 +283,141 @@
         </div>
     </div>
 
-    <div class="modal fade" id="messageModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5"
-                        id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save
-                        changes</button>
-                </div>
-            </div>
+    <div class="modal fade" id="notificationModal" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Notifications</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+
+          <div class="d-flex align-items-center">
+            <span>Notifications</span>
+            <div class=" ms-auto" aria-hidden="true"><a href
+                class="nav-ham-link"> View All</a> | <a href
+                class="nav-ham-link"> Read All</a></div>
+          </div>
+
+          <br>
+
+          <div class="row ">
+            <div class="col-sm-2 text-center">
+              <h1><i class="bi bi-bell-fill"></i></h1>
+            </div>
+            <div class="col">
+              <h5>You have received a new notification!</h5>
+              <p>Test notification!</p>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row ">
+            <div class="col-sm-2 text-center">
+              <h1><i class="bi bi-bell-fill"></i></h1>
+            </div>
+            <div class="col">
+              <h5>You have received a new notification!</h5>
+              <p>Test notification!</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </div>
+  </div>
+
+  <div class="modal fade" id="messageModal" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Chats</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row msg align-items-center" data-bs-target="#actualMessageModal" data-bs-toggle="modal">
+            <div class="col-sm-3 text-center" style="border-right: 1px solid black;">
+              <h1><i class="bi bi-person-fill"></i></h1>
+              <span>Jason Catadman</span>
+            </div>
+            <div class="col">
+              <p><em>You: Sure sir Catadman. I will work on that right now.</em></p>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row unread msg align-items-center">
+            <div class="col-sm-3 text-center" style="border-right: 1px solid black;">
+              <h1><i class="bi bi-person-fill"></i></h1>
+              <span>Ceed Lorenzo</span>
+            </div>
+            <div class="col">
+              <p><em>Lorenzo: Good afternoon sir, ask ko lang if available po si...</em></p>
+            </div>
+          </div>
+          
+       
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="actualMessageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Chats</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="chatBody">
+          <div class="time text-center grey">
+            2:09 PM - 8/11/2024
+          </div>
+          <br>
+          <div class="row sender">
+            <div class="col">
+              <i class="bi bi-person-fill"></i>
+              <div class="message">
+                <span>Hi, this is Jason Catadman. I'd like to switch from Web Technologies to Software Engineering, thanks!</span>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row receiver">
+            <div class="col">
+              <div class="message">
+                <span>Sure sir Catadman. I will work on that right now.</span>
+              </div>
+              <i class="bi bi-person"></i>
+            </div>
+          </div>
+          <br>
+        </div>
+        
+          <div class="modal-footer">
+          <form id="messageForm">
+            <div class="d-flex align-items-center">
+              <textarea id="messageInput" cols="45"></textarea>
+              <div class="ms-auto" aria-hidden="true" style="margin-left: 10px">
+                <input type="submit" value="Send">
+              </div>
+            </div>
+            </div>
+          </form>
+    
+      </div>
+    </div>
+  </div>
 
     <div class="modal fade" id="notesModal" tabindex="-1"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -368,6 +480,14 @@
                 </div>
                 <div class="modal-body">
                     <form>
+                        <div class="mb-3">
+                            <label for="full_name"
+                            class="form-label">Full Name</label>
+                     
+                  
+                        <input type="text" class="form-control"
+                            id="username" name="full_name">
+                        </div>
                         <div class="mb-3">
                             <label for="username"
                                 class="form-label">Username</label>
@@ -438,14 +558,74 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5"
-                        id="exampleModalLabel">Modal title</h1>
+                        id="exampleModalLabel">Editing Staff: Jason Catadman</h1>
                     <button type="button" class="btn-close"
                         data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="full_name"
+                            class="form-label">Full Name</label>
+                     
+                  
+                        <input type="text" class="form-control"
+                            id="username" name="full_name">
+                        </div>
+                            <div class="mb-3">
+                            <label for="username"
+                                class="form-label">Username</label>
+                            <input type="text" class="form-control"
+                                id="username" name="username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email
+                            </label>
+                            <input type="email" class="form-control"
+                                id="email" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+
+                            <input type="password" class="form-control"
+                                id="password" name="password" style="width: 100%; display: inline !important;"></input>
+                                <span style="
+                                position: absolute;
+                                display: inline; 
+                                right: 5%; 
+                                margin-top: 5px !important;
+                                vertical-align: middle"><i class="bi bi-eye-slash-fill" id="togglerPassword"></i></span>
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirm_password" class="form-label">Confirm Password</label>
+
+                            <input type="password" class="form-control"
+                                id="confirm_password" name="confirm_password" style="width: 100%; display: inline !important;"></input>
+                                <span style="
+                                position: absolute;
+                                display: inline; 
+                                right: 5%; 
+                                margin-top: 5px !important;
+                                vertical-align: middle"><i class="bi bi-eye-slash-fill" id="togglerConfirmPassword"></i></span>
+                                
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="gender" class="form-label">Gender</label>
+
+                            <select class="form-control" name="gender">
+                                <option>Select a gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                                
+                        </div>
+
+
+                    </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary"
                         data-bs-dismiss="modal">Close</button>
@@ -619,6 +799,45 @@ const togglerPassword = document
   }
 });
         }
+        
+    </script>
 
+    <script>
+             document.getElementById('messageForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get the message from the textarea
+    var messageText = document.getElementById('messageInput').value;
+
+    // If the message is not empty, append it to the chat
+    if (messageText.trim() !== '') {
+      var chatBody = document.getElementById('chatBody');
+
+      // Create the new message element
+      var newMessage = document.createElement('div');
+      newMessage.className = 'row receiver'; // Set it as a sender message
+      newMessage.innerHTML = `
+      
+            <div class="col">
+              <div class="message">
+                 <span>${messageText}</span>
+              </div>
+              <i class="bi bi-person"></i>
+            </div>
+      
+      
+      `;
+
+      // Append the new message to the chat body
+      chatBody.appendChild(newMessage);
+
+      // Clear the textarea
+      document.getElementById('messageInput').value = '';
+
+      // Scroll to the bottom of the chat
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+    }
+  });
     </script>
 </html>

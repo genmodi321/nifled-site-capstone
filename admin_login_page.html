@@ -54,21 +54,21 @@
                 <h5 class="bold">ADMIN LOGIN</h5>
 
                 <div class="container login-container-with-input">
-                    <form>
+                    <form action="dashboard.html"> 
                         <label style="text-align: left !important;"
                             class="bold">USERNAME</label>
-                        <input class="form-control" name="username"
-                            placeholder="Username">
+                        <input class="form-control" name="username" type="text"
+                            placeholder="Username" required>
                         <br>
                         <label style="text-align: left !important;"
                             class="bold">PASSWORD</label>
-                        <input class="form-control" name="password"
-                            placeholder="Password">
+                        <input class="form-control" name="password" type="password"
+                            placeholder="Password" required>
                     </div>
 
                     <div class="button-linkers d-flex justify-content-between">
                         <a href="staff_create_account.html" class="gb-link me-auto"  class="gb">Create an Account</a>
-                        <a href="staff_forgot_password.html" class="gb-link">Forgot your password?</a>
+                        <a  data-bs-toggle="modal" data-bs-target="#resetPasswordModal" class="gb-link">Forgot your password?</a>
 
                     </div>
                     <div class="container login-container-with-input">
@@ -77,6 +77,29 @@
                 </div>
 
             </form>
+        </div>
+
+        <div class="modal fade" id="resetPasswordModal" tabindex="-1" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="resetPasswordModalLabel">Reset Password</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="resetPasswordForm">
+                            <div class="mb-3">
+                                <label for="emailInput" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="Enter your email address" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+    
+                        <button type="submit" class="btn btn-primary" form="resetPasswordForm">Send Reset Link</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script

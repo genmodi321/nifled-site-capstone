@@ -139,3 +139,29 @@ a{
 .remove-subject {
     color: red !important;
 }
+
+.message{
+    display: inline-block !important;
+    background-color: #415D43;
+    color: white !important;
+    padding: 10px;
+    border-radius: 25px;
+    width: 90%;
+}
+
+.receiver{
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.grey{
+    color: gray !important;
+}
+
+.msg:hover{
+    background-color: lightgray;
+}
+
+.unread{
+    background-color: gainsboro;
+}

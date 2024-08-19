@@ -295,3 +295,9 @@ input[type=number] {
     border-bottom: 1px solid black;
     text-align: center;
 }
+
+
+.btn-csms-outline{
+    border: 1px solid white;
+    color: white !important;
+}

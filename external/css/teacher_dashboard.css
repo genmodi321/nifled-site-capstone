@@ -172,5 +172,9 @@ a{
     border: 1px solid white;
     color: white;
     box-sizing: border-box;
+}
 
+.btn-csms-outline{
+    border: 1px solid white;
+    color: white !important;
 }

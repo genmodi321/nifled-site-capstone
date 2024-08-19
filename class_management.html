@@ -77,7 +77,7 @@
 
                     <div class="navigation-links" style="text-align: left;">
                         <span><i class="bi bi-house"></i> Home</span>
-                        <a href="index.html"><p><i class="bi bi-kanban"></i> Index</p></a>
+                        <a href="dashboard.html"><p><i class="bi bi-kanban"></i> Index</p></a>
                         <hr>
                         <span><i class="bi bi-menu-button-wide"></i>
                           Management</span>
@@ -327,28 +327,92 @@
     </div>
 
     <div class="modal fade" id="messageModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5"
-                        id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save
-                        changes</button>
-                </div>
-            </div>
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Chats</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+
+          <div class="row msg align-items-center" data-bs-target="#actualMessageModal" data-bs-toggle="modal">
+            <div class="col-sm-3 text-center" style="border-right: 1px solid black;">
+              <h1><i class="bi bi-person-fill"></i></h1>
+              <span>Jason Catadman</span>
+            </div>
+            <div class="col">
+              <p><em>You: Sure sir Catadman. I will work on that right now.</em></p>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row unread msg align-items-center">
+            <div class="col-sm-3 text-center" style="border-right: 1px solid black;">
+              <h1><i class="bi bi-person-fill"></i></h1>
+              <span>Ceed Lorenzo</span>
+            </div>
+            <div class="col">
+              <p><em>Lorenzo: Good afternoon sir, ask ko lang if available po si...</em></p>
+            </div>
+          </div>
+          
+       
+
+        </div>
+
+      </div>
     </div>
+  </div>
+
+  <div class="modal fade" id="actualMessageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Chats</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="chatBody">
+          <div class="time text-center grey">
+            2:09 PM - 8/11/2024
+          </div>
+          <br>
+          <div class="row sender">
+            <div class="col">
+              <i class="bi bi-person-fill"></i>
+              <div class="message">
+                <span>Hi, this is Jason Catadman. I'd like to switch from Web Technologies to Software Engineering, thanks!</span>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row receiver">
+            <div class="col">
+              <div class="message">
+                <span>Sure sir Catadman. I will work on that right now.</span>
+              </div>
+              <i class="bi bi-person"></i>
+            </div>
+          </div>
+          <br>
+        </div>
+        
+          <div class="modal-footer">
+          <form id="messageForm">
+            <div class="d-flex align-items-center">
+              <textarea id="messageInput" cols="45"></textarea>
+              <div class="ms-auto" aria-hidden="true" style="margin-left: 10px">
+                <input type="submit" value="Send">
+              </div>
+            </div>
+            </div>
+          </form>
+    
+      </div>
+    </div>
+  </div>
 
     <div class="modal fade" id="notesModal" tabindex="-1"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -512,14 +576,72 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5"
-                        id="exampleModalLabel">Modal title</h1>
+                        id="exampleModalLabel">Editing Class Content for BSIT-4A</h1>
                     <button type="button" class="btn-close"
                         data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="class" class="form-label">Select
+                                Class: </label>
+                            <select class="form-select" name="class">
+                                <option selected>Select a class</option>
+                                <option value="BSIT-1A">BSIT-1A</option>
+                                <option value="BSIT-1B">BSIT-1B</option>
+                                <option value="BSIT-2A">BSIT-2A</option>
+                                <option value="BSIT-2B">BSIT-2B</option>
+                                <option value="BSIT-3A">BSIT-3A</option>
+                                <option value="BSIT-3B">BSIT-3B</option>
+                                <option value="BSIT-4A">BSIT-4A</option>
+                                <option value="BSIT-4B">BSIT-4B</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="class" class="form-label">Select
+                                Subect Name: </label>
+                            <select class="form-select" name="subjectName">
+                                <option selected>Select a class</option>
+                                <option value="SYSTEMS ADMINISTRATION AND MAINTENANCE">Systems Administration and Maintenance</option>
+                                <option value="CAPSTONE PROJECT AND RESEARCH 1">Capstone Project and Research I</option>
+                                <option value="CAPSTONE PROJECT AND RESEARCH 2">Capstone Project and Research 2</option>
+                                <option value="INFORMATION ASSURANCE AND SECURTIY 1">Information Assurance and Security 1</option>
+                                <option value="INFORMATION ASSURANCE AND SECURTIY 2">Information Assurance and Security 2</option>
+                               
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="teacher" class="form-label">Select
+                                Teacher: </label>
+                            <select class="form-select" name="teacher">
+                                <option selected>Select a teacher</option>
+                                <option value="Mr. Jason Catadman">Mr. Jason Catadman</option>
+                                <option value="Mr. John Ed Augustus Escorial">Mr. John Ed Augustus Escorial</option>
+                                <option value="Mr. Ceed Jenzelle Lorenzo">Mr. Ceed Jenzelle Lorenzo</option>
+                            </select>
+                        </div>
+                       
+                        <div class="mb-3">
+                            <label for="semester" class="form-label">Select
+                                Semester: </label>
+                            <select class="form-select" name="semester">
+                                <option value="First Semester">First
+                                    Semester</option>
+                                <option value="Second Semester">Second
+                                    Semester</option>
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="classDesc" class="form-label">Class
+                                Description</label>
+                            <textarea type="text" class="form-control"
+                                id="classDesc" name="classDesc"></textarea>
+                        </div>
+
+                    </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary"
                         data-bs-dismiss="modal">Close</button>
@@ -530,29 +652,23 @@
         </div>
     </div>
 
-    <div class="modal fade" id="deleteModal" tabindex="-1"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5"
-                    id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"
-                    data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save
-                    changes</button>
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Are you sure?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Do you really want to delete this class? This process cannot be undone.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <script>
 
@@ -620,17 +736,16 @@ $(document).ready(function() {
                 ]
             };
 
-            // Event listener for class selection change
             $('#class-select').change(function() {
                 var classSelected = $(this).val();
                 var subjectSelect = $('#subject-select');
                 var assignedSubjectsContainer = $('#assigned-subjects-container');
 
-                subjectSelect.empty(); // Clear existing options
-                assignedSubjectsContainer.empty(); // Clear assigned subjects
+                subjectSelect.empty();
+                assignedSubjectsContainer.empty(); 
 
                 if (classSelected !== 'Select a class') {
-                    // Populate available subjects
+                  
                     $.each(subjects[classSelected], function(index, subject) {
                         subjectSelect.append($('<option>', {
                             value: subject.value,
@@ -638,7 +753,7 @@ $(document).ready(function() {
                         }));
                     });
 
-                    // Populate assigned subjects
+               
                     $.each(assignedSubjects[classSelected], function(index, subject) {
                         assignedSubjectsContainer.append(
                             '<div class="col"><small>' + subject + '</small></div>' +
@@ -654,12 +769,12 @@ $(document).ready(function() {
                 }
             });
 
-            // Event listener for subject selection change
+  
             $('#subject-select').change(function() {
                 var subjectSelected = $(this).val();
                 var assignedSubjectsContainer = $('#assigned-subjects-container');
 
-                // Avoid adding duplicate subjects
+              
                 var exists = assignedSubjectsContainer.find('.col:contains("' + subjectSelected + '")').length;
                 if (!exists && subjectSelected !== 'Select a class first') {
                     assignedSubjectsContainer.append(
@@ -669,12 +784,49 @@ $(document).ready(function() {
                 }
             });
 
-            // Event listener for removing assigned subject
+
             $(document).on('click', '.remove-subject', function(e) {
                 e.preventDefault();
                 $(this).closest('.col').prev('.col').remove();
                 $(this).closest('.col').remove();
             });
         });
+
+        document.getElementById('messageForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+
+    var messageText = document.getElementById('messageInput').value;
+
+
+    if (messageText.trim() !== '') {
+      var chatBody = document.getElementById('chatBody');
+
+
+      var newMessage = document.createElement('div');
+      newMessage.className = 'row receiver'; 
+      newMessage.innerHTML = `
+      
+            <div class="col">
+              <div class="message">
+                 <span>${messageText}</span>
+              </div>
+              <i class="bi bi-person"></i>
+            </div>
+      
+      
+      `;
+
+
+      chatBody.appendChild(newMessage);
+
+
+      document.getElementById('messageInput').value = '';
+
+
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+    }
+});
     </script>
 </html>

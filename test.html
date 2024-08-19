@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Uploaded Files</title>
-</head>
-<body>
-    <form id="uploadForm">
-        <input type="file" id="fileInput" multiple>
-        <ul id="fileList"></ul>
-        <button type="submit">Upload</button>
-    </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calendar.js Attendance Tracker</title>
 
-    <script>
-        const fileInput = document.getElementById('fileInput');
-        const fileList = document.getElementById('fileList');
+        <!-- Include Calendar.js CSS -->
+        <link rel="stylesheet" href="vendor/calendar.js/dist/calendar.js.css">
 
-        fileInput.addEventListener('change', updateFileList);
+        <script src="vendor/calendar.js/dist/calendar.js"></script>
 
-        function updateFileList() {
-            fileList.innerHTML = '';
+    </head>
+    <body>
 
-            const files = Array.from(fileInput.files);
+        <div id="calendar">caasd</div>
 
-            files.forEach((file, index) => {
-                const listItem = document.createElement('li');
-                listItem.textContent = file.name;
+        <!-- Include Calendar.js -->
 
-                const removeButton = document.createElement('button');
-                removeButton.textContent = 'Remove';
-                removeButton.style.marginLeft = '10px';
-                removeButton.addEventListener('click', () => {
-                    removeFile(index);
-                });
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the calendar
+    var calendar = new Calendar('#calendar', {
+        date: new Date(),
+        auto_select: true,
+        week_start: 1
+    });
 
-                listItem.appendChild(removeButton);
-                fileList.appendChild(listItem);
-            });
-        }
+    // Attendance data
+    var attendanceData = {
+        '2024-08-19': '✓ Present',
+        '2024-08-20': '✗ Absent'
+    };
 
-        function removeFile(index) {
-            const dt = new DataTransfer();
+    // Add attendance data to the calendar
+    for (var date in attendanceData) {
+        var eventClass = attendanceData[date] === '✗ Absent' ? 'absent' : '';
+        calendar.addEvent(date, attendanceData[date], eventClass);
+    }
+});
+</script>
 
-            const files = Array.from(fileInput.files);
-
-            files.forEach((file, i) => {
-                if (index !== i) {
-                    dt.items.add(file);
-                }
-            });
-
-            fileInput.files = dt.files;
-            updateFileList();
-        }
-    </script>
-</body>
+    </body>
 </html>

@@ -111,9 +111,8 @@
                     </span>
 
                   </a>
-                  <a href class="nav-link-span">
-                    <i
-                      class="bi bi-person-circle iconics"></i></a>
+                  <a href="index.html"a class="nav-link-span">
+                    <button class="btn btn-csms-outline">Logout</button></a>
 
                 </span>
 
@@ -145,7 +144,7 @@
 
               <div class="row">
                 <div class="d-flex align-items-center">
-                  <button class="btn btn-csms"><i
+                  <button class="btn btn-csms"  onclick="gotoAttendance()"><i
                       class="bi bi-file-binary-fill"></i> Attendance</button>
                   &nbsp;
                   <button class="btn btn-csms"><i class="bi bi-pen-fill"></i>
@@ -969,6 +968,10 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
     function goBack(){
       window.location.href = "teacher_class_management.html"
+    }
+
+    function gotoAttendance(){
+      window.location.href = "teacher_class_attendance.html";
     }
 </script>
 

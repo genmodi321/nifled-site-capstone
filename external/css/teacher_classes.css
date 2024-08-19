@@ -208,3 +208,10 @@ input[type=number] {
     border: none;
     outline: none;
 }
+
+
+
+.btn-csms-outline{
+    border: 1px solid white;
+    color: white !important;
+}

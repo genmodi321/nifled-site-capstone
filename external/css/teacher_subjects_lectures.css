@@ -294,3 +294,9 @@ input[type=number] {
     padding: 10px;
     border-radius: 10px;
 }
+
+
+.btn-csms-outline{
+    border: 1px solid white;
+    color: white !important;
+}
